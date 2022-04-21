@@ -1,38 +1,247 @@
+@font-face {
+  font-family: 'Aesthetic';
+  src: url('./assets/Aesthetic-Regular.woff2') format('woff2'),
+      url('./assets/Aesthetic-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #08372c;
+  color: #fbdce2;
+  height: 100%;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: '';
+  opacity: .02;
+  z-index: 1500;
   pointer-events: none;
+  background: url(./assets/noise.gif);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  height: 50vh;
+  width: 100%;
+  top: -120px;
+  position: relative;
+  cursor: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.container1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 0px 100px;
+  height: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
+  cursor: none;
 }
 
-.App-link {
-  color: #61dafb;
+.txt-line {
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.txt-line p {
+  cursor: none;
+  font-size: 200px;
+  text-transform: uppercase;
+  font-family: 'Aesthetic';
+  overflow: hidden;
+}
+
+.wrapper {
+  /* box-sizing: content-box; */
+  height: 140px;
+  /* padding: 50px 30px; */
+  display: flex;
+  padding: 50px 100px;
+}
+
+/* hr {
+  background-color: #fbdce2;
+  overflow: hidden;
+  width: 100%;
+  margin-left: 50px;
+  display: flex;
+  text-align: right;
+} */
+
+hr {
+  background-color: #fbdce2;
+}
+
+.txt-line-title {
+  overflow: hidden;
+}
+.txt-line-title span {
+  display: block;
+  height: 100%;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-family: 'Aesthetic';
+  animation: spin_words 6s infinite;
+  text-align: right;
+}
+
+@keyframes spin_words {
+  10% {
+    transform: translateY(-112%);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translateY(-100%);
+  }
+  35% {
+    transform: translateY(-212%);
+  }
+  50% {
+    transform: translateY(-200%);
+  }
+  60% {
+    transform: translateY(-312%);
+  }
+  75% {
+    transform: translateY(-300%);
+  }
+  85% {
+    transform: translateY(-412%);
+  }
+  100% {
+    transform: translateY(-400%);
   }
 }
+
+.left-side-quote {
+  margin-left: 120px;
+  position: relative;
+  top: -120px;
+}
+
+.left-side-quote p {
+  margin-top: 50px;
+  font-size: 15px;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  word-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.star-svg {
+  margin-left: 150px;
+  margin-top: -250px;
+}
+
+.star-svg img {
+  animation: animate-rotate 30s infinite linear;
+  width: 80px;
+}
+
+
+.logo {
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+ @media (max-width: 1200px) {
+  .txt-line p{
+      font-size: 100px;
+  }
+  br {
+    display: none;
+  }
+  .reel-item{
+      font-size: 100px;
+  }
+  .txt-line-title span {
+    font-size: 60px;
+  }
+  .wrapper {
+    height: 170px;
+  }
+  .logo {
+    width: 70px;
+  }
+}
+@media (max-width: 600px) {
+  .txt-line p{
+      font-size: 60px;
+  }
+  .container {
+    margin-bottom: 100px;
+  }
+  .txt-line-title span {
+    font-size: 60px;
+  }
+  .wrapper {
+    height: 170px;
+  }
+  .left-side-quote{
+      margin-left: 3vw;
+      padding: 0px 35px;
+  }
+  .left-side-quote p{
+      font-size: 12px;
+  }
+  .container1{
+      padding: 80px 50px;
+  }
+  .container2{
+    padding: 0px 35px;
+}
+.container {
+  height: 20vh;
+}
+
+.reel-item{
+      font-size: 60px;
+      margin-top: 50px;
+  }
+}
+
+.main-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #fbdce2;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+ 
+}
+
+.secondary-cursor {
+  z-index: 10000;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  background-color: #fbdce2;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+
+
+
+

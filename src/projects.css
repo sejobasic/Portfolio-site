@@ -1,0 +1,89 @@
+.main-nav {
+  display: fixed;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  padding: 10vh 1vw;
+}
+
+.image-hover {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.project-title {
+  font-family: 'Aesthetic';
+  font-size: 100px;
+  color: #fbdce2;
+  z-index: 1;
+}
+
+.project-title:hover {
+  z-index: 5;
+  color: transparent;
+  -webkit-text-stroke: 1px #fbdce2;
+}
+
+
+.project-img {
+  position: absolute;
+  left: 10%;
+  top: 155%;
+  transform: translate3d(-50%, -50%);
+  max-width: 20%;
+  max-height: 60vh;
+  pointer-events: none;
+  visibility: hidden;
+  mix-blend-mode: difference;
+  opacity: 0;
+  transition: opacity 0.2s linear, visibility 0s linear 0.2s;
+}
+
+.image-hover:hover img {
+  transition-delay: 0s;
+  visibility: visible;
+  opacity: 1;
+  mix-blend-mode: soft-light;
+}
+
+.projects-main-reel {
+  width: 100%;
+  top: 500%;
+  overflow: hidden;
+}
+
+.projects-reel {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  will-change: transform;
+  animation: animation-reel 60s infinite linear;
+}
+
+@keyframes animation-reel {
+  from {
+    transform: translateX(0%)
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.reel-item {
+  font-family: 'Aesthetic';
+  font-size: 180px;
+  text-transform: uppercase;
+}
+
+div.flag {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+
+
