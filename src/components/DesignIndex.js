@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import DesignItem from './DesignItem'
 import { imageData } from '../utils/designData'
+import LocomotiveScroll from 'locomotive-scroll'
+import '../../node_modules/locomotive-scroll/src/locomotive-scroll.scss'
 import '../design.css'
 
 function DesignIndex() {
+  const scrollRef = useRef(null)
+
+  useEffect(() => {
+    if (scrollRef) {
+      new LocomotiveScroll({
+        el: scrollRef.current,
+        smooth: true,
+        // direction: 'horizontal',
+        multiplier: 0.5
+      })
+    }
+  }, [])
+  
 
   const images = imageData.map((tupples, index) => 
     tupples.map((url, elementIndex) => (
@@ -17,8 +32,8 @@ function DesignIndex() {
   )
   return (
     <div className='main-container'>
-      <div className="scroll-container">
-        <div className="content">
+      <div className="scroll-container" data-scroll-section  ref={scrollRef}>
+        <div className="content" data-scroll data-scroll-speed="1">
           <div className="gallery">
             {images}
             <div className="gallery-helper">

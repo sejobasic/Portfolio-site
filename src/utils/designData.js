@@ -1,9 +1,9 @@
 const photos = [
-  require('../assets/layr.png'),
-  require('../assets/layr.png'),
-  require('../assets/layr.png'),
-  require('../assets/layr.png'),
-  require('../assets/layr.png')
+  require('../assets/design10.jpeg'),
+  require('../assets/design11.jpg'),
+  require('../assets/design13.png'),
+  require('../assets/design4.png'),
+  require('../assets/design5.png')
 ]
 
 const imageData = [photos, photos, photos, photos]

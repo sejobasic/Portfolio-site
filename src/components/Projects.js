@@ -29,27 +29,6 @@ function useMousePosition() {
 function Projects() {
   const [activeIndex, setActiveIndex] = useState(-1)
   const {x, y} = useMousePosition()
-  
-  // const imgRef = useRef(null)
-  // const imgRef2 = useRef(null)
-
-  // useEffect(() => {
-  //   document.addEventListener('mousemove', (event) => {
-  //     const { clientX, clientY } = event
-  //     const mouseX = clientX - imgRef.current.clientWidth / 1
-  //     const mouseY = clientY - imgRef.current.clientHeight / 1
-  //     imgRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
-  //   })
-  // }, [])
-
-  // useEffect(() => {
-  //   document.addEventListener('mousemove', (event) => {
-  //     const { clientX, clientY } = event
-  //     const mouseX = clientX - imgRef2.current.clientWidth / 1
-  //     const mouseY = clientY - imgRef2.current.clientHeight / 1
-  //     imgRef2.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
-  //   })
-  // }, [])
 
   return (
     <div className='projects-main-reel'>
