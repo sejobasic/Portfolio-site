@@ -1,5 +1,4 @@
 import React, {useEffect, useRef} from 'react'
-import cursor from './assets/star2.svg'
 
 function Cursor() {
 

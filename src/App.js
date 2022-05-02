@@ -1,9 +1,9 @@
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import Projects from './Projects'
-import Cursor from './Cursor'
-// import Design from './Design'
+import Home from './components/Home'
+import Projects from './components/Projects'
+import Cursor from './components/Cursor'
+import Design from './components/DesignIndex'
 // import Photo from './Photo'
 // import Contact from './Contact'
 
@@ -15,8 +15,8 @@ function App() {
           <Cursor />
           <Home />
           <Projects />
-          {/* <Design />
-          <Photo />
+          <Design />
+          {/* <Photo />
           <Contact /> */}
         </div>
       </div>

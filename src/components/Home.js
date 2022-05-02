@@ -1,6 +1,6 @@
 import React from 'react'
 // import star from './assets/star1.svg'
-import sejo from './assets/sejo2.png'
+import sejo from '../assets/sejo2.png'
 
 function Home() {
   return (
