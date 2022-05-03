@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Projects from './components/Projects'
 import Cursor from './components/Cursor'
 import Design from './components/DesignIndex'
-// import Photo from './Photo'
+import Photo from './components/Photo'
 // import Contact from './Contact'
 
 function App() {
@@ -13,11 +13,11 @@ function App() {
       <div className="noise">
         <div className="App">
           <Cursor />
+          {/* <Design /> */}
           <Home />
           <Projects />
-          <Design />
-          {/* <Photo />
-          <Contact /> */}
+          <Photo />
+          {/* <Contact />  */}
         </div>
       </div>
     </div>

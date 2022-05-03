@@ -5,7 +5,7 @@ import sejo from '../assets/sejo2.png'
 function Home() {
   return (
     <div className='home'>
-            <img className='logo' src={sejo} alt="sejo logo" />
+        <img className='logo' src={sejo} alt="sejo logo" />
       <div className="container">
           <div className="container1">
               <div className="txt-line" id="sejo">

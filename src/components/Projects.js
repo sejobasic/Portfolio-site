@@ -1,12 +1,9 @@
 import React, {useRef, useEffect, useState} from 'react'
 import '../projects.css'
-import layr from '../assets/layr.png'
-import simple from '../assets/simple.png'
+import shape2 from '../assets/shape2.png'
 import projectData from '../utils/projectData'
 import Title from './Title'
 import Media from './Media'
-import { gsap } from 'gsap'
-import * as THREE from 'three';
 
 function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({x: 0, y: 0})
@@ -44,6 +41,9 @@ function Projects() {
         <div className='reel-item'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
       </div>
+      <div className='shape-container'>
+      <img src={shape2} alt="shape" />
+      </div>
       <div className='project-wrapper'>
         <div className='project-list'>
           {projectData.map(({title}, index) => (
@@ -63,6 +63,9 @@ function Projects() {
             return <Media url={mediaUrl} active={isActive} x={xPos} y={yPos} />
           })}
         </div>
+      </div>
+      <div className='shape-container-bottom'>
+      <img src={shape2} alt="shape" />
       </div>
     </div>
   )

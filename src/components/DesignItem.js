@@ -20,7 +20,7 @@ function DesignItem({src, index, columnOffset}) {
       <div className="design-item-image">
         <div 
           className="design-item-imginner"
-          style={{backgroundImage: `url(${src})`}}
+          style={{backgroundImage: `url(${src})`,}}
         ></div>
       </div>
     </div>

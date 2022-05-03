@@ -15,6 +15,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.home {
+  margin-bottom: -15%;
+}
+
 .App {
   margin: 0;
   padding: 0;
@@ -241,6 +245,8 @@ hr {
   border-radius: 50%;
   mix-blend-mode: difference;
 }
+
+
 
 
 

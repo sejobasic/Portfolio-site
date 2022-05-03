@@ -1,0 +1,46 @@
+.photo-main-reel {
+  width: 100%;
+  top: 5%;
+  overflow: hidden;
+  display: fixed;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.photo-reel {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  will-change: transform;
+  animation: animation-photo-reel 60s infinite linear;
+}
+
+@keyframes animation-photo-reel {
+  from {
+    transform: translateX(0%)
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.reel-item {
+  font-family: 'Aesthetic';
+  font-size: 180px;
+  text-transform: uppercase;
+}
+
+.reel-item-outline {
+  font-family: 'Aesthetic';
+  font-size: 180px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.9px #fbdce2;
+  color: transparent;
+}
+
+div.flag {
+  width: 100vw;
+  height: 100vh;
+}

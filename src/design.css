@@ -1,13 +1,18 @@
 .main-container {
   padding-right: 500px;
+  box-sizing: border-box;
+}
+
+.scroll-container {
+  margin-right: 500px;
 }
 
 .content {
   display: flex;
   height: 100vh;
   justify-content: center;
-  align-items: center;
   position: relative;
+  align-items: center;
 }
 
 .gallery {
@@ -38,21 +43,16 @@
   font-size: 12em;
   font-weight: 600;
   font-family: neue-haas-unica, sans-serif;
+  color: #fbdce2;
   letter-spacing: 50px;
-}
-
-.gallery-text .fill {
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.gallery-text .outline {
   z-index: 2;
   mix-blend-mode: overlay;
 }
 
 .design-item {
   z-index: 1;
-  height: 100%;
+  width: 150%;
+  height: 150%;
 }
 
 .design-item-image {

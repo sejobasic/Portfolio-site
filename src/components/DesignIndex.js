@@ -13,8 +13,10 @@ function DesignIndex() {
       new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
-        // direction: 'horizontal',
-        multiplier: 0.5
+        direction: 'horizontal',
+        multiplier: 0.5,
+        scrollFromAnywhere: true,
+        gestureDirection: 'both'
       })
     }
   }, [])
@@ -32,8 +34,8 @@ function DesignIndex() {
   )
   return (
     <div className='main-container'>
-      <div className="scroll-container" data-scroll-section  ref={scrollRef}>
-        <div className="content" data-scroll data-scroll-speed="1">
+      <div className="scroll-container" data-scroll-container  ref={scrollRef}>
+        <div className="content" data-scroll-section>
           <div className="gallery">
             {images}
             <div className="gallery-helper">
