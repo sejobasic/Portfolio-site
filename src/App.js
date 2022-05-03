@@ -6,7 +6,7 @@ import Cursor from './components/Cursor'
 import Design from './components/DesignIndex'
 import Photo from './components/Photo'
 import Navbar from './components/Navbar'
-// import Contact from './Contact'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Home />
           <Projects />
           <Photo />
-          {/* <Contact />  */}
+          <Contact />
         </div>
       </div>
     </div>

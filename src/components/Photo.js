@@ -25,6 +25,17 @@ function Photo() {
         <div className='reel-item-outline'>&nbsp;DESIGN</div>
         <div className='reel-item'>&nbsp;+</div>
       </div>
+      <div>
+        <h1>
+          Test
+        </h1>
+        <h1>
+          Test
+        </h1>
+        <h1>
+          Test
+        </h1>
+      </div>
     </div>
   )
 }

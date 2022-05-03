@@ -1,4 +1,3 @@
-
 .navbar {
   position: fixed;
   top: 2%;
@@ -11,10 +10,9 @@
 }
 
 .navbar span {
-  display: block;
+  /* display: block; */
   color: #fbdce2;
   padding: 14px 16px;
-  text-decoration: none;
   font-family: neue-haas-unica, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -25,16 +23,22 @@
   position: relative;
 }
 
-/* .nav-item > div {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  /* overflow: hidden; */
-  /* clear: both; */
+.nav-item .active {
+  padding-bottom: 12px;
+  border-bottom: 3px solid #fbdce2;
+}
 
+.nav-item:hover > div:nth-child(1) span {
+  text-decoration: line-through;
+}
+
+.nav-item .active > div:nth-child(1) span {
+  text-decoration: line-through;
+}
 
 .nav-item-text {
   display: block;
-  /* pointer-events: none; */
+  pointer-events: none;
   position: relative;
 }
 
@@ -58,7 +62,7 @@
 }
 
 .nav-item:hover > div:nth-child(1) span {
-  transform: translate3d(0, -100%, 0) rotateX(-90deg);
+  transform: translate3d(0, -120%, 0) rotateX(150deg);
 }
 
 .nav-item:hover > div:nth-child(2) span {
