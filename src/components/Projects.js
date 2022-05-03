@@ -31,15 +31,15 @@ function Projects() {
     <div className='projects-main-reel'>
       <div className='projects-reel' id='projects'>
         <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
       </div>
       <div className='shape-container'>
       <img src={shape2} alt="shape" />

@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Cursor from './components/Cursor'
 import Design from './components/DesignIndex'
 import Photo from './components/Photo'
+import Navbar from './components/Navbar'
 // import Contact from './Contact'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <div className="noise">
         <div className="App">
           <Cursor />
+          <Navbar />
           {/* <Design /> */}
           <Home />
           <Projects />

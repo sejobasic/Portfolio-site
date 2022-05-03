@@ -1,0 +1,67 @@
+
+.navbar {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.navbar span {
+  display: block;
+  color: #fbdce2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* .nav-item > div {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /* overflow: hidden; */
+  /* clear: both; */
+
+
+.nav-item-text {
+  display: block;
+  /* pointer-events: none; */
+  position: relative;
+}
+
+.nav-item > div:nth-child(1) span {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: bottom;
+  display: inline-block;
+}
+
+.nav-item > div:nth-child(2) span {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: top;
+  display: inline-block;
+  transform: translate3d(0, 100%, 0) rotateX(-90deg);
+}
+
+.nav-item:hover > div:nth-child(1) span {
+  transform: translate3d(0, -100%, 0) rotateX(-90deg);
+}
+
+.nav-item:hover > div:nth-child(2) span {
+  transform: translate3d(0, 0%, 0) rotateX(0deg);
+}
+
