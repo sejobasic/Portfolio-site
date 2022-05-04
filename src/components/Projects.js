@@ -1,5 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react'
-import '../projects.css'
+import '../styling/projects.css'
 import shape2 from '../assets/shape2.png'
 import projectData from '../utils/projectData'
 import Title from './Title'

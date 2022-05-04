@@ -1,12 +1,26 @@
 .navbar {
   position: fixed;
   top: 2%;
-  right: 2%;
+  left: 2%;
   width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.logo-nav {
+  position: fixed;
+  top: 2%;
+  right: 2%;
   justify-content: flex-end;
   display: flex;
   z-index: 1;
   mix-blend-mode: difference;
+}
+
+.logo {
+  width: 40px;
 }
 
 .navbar span {
@@ -23,16 +37,7 @@
   position: relative;
 }
 
-.nav-item .active {
-  padding-bottom: 12px;
-  border-bottom: 3px solid #fbdce2;
-}
-
 .nav-item:hover > div:nth-child(1) span {
-  text-decoration: line-through;
-}
-
-.nav-item .active > div:nth-child(1) span {
   text-decoration: line-through;
 }
 
@@ -69,3 +74,29 @@
   transform: translate3d(0, 0%, 0) rotateX(0deg);
 }
 
+.logo-item > div:nth-child(1) img {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: bottom;
+  display: inline-block;
+}
+
+.logo-item > div:nth-child(2) img {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: top;
+  display: inline-block;
+  transform: translate3d(0, 100%, 0) rotateX(90deg);
+}
+
+.logo-item:hover > div:nth-child(1) img {
+  transform: translate3d(0, -120%, 0) rotateX(150deg);
+}
+
+.logo-item:hover > div:nth-child(2) img {
+  transform: translate3d(0, 0%, 0) rotateX(0deg);
+}

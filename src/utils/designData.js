@@ -1,33 +1,43 @@
-// const photos = [
-//   require('../assets/img1.jpg'),
-//   require('../assets/img2.jpg'),
-//   require('../assets/img3.jpg'),
-//   require('../assets/img4.jpg'),
-//   require('../assets/img2.jpg')
-// ]
-
-
-const photos = [
-  "https://i.ibb.co/rytjJ95/img4.jpg",
-  "https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1402&q=100",
-
-  "https://images.unsplash.com/photo-1449182210692-60ced46ae304?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2491&q=100",
-
-  "https://images.unsplash.com/photo-1537253500005-0945025bafe6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2700&q=100",
-
-  "https://images.unsplash.com/photo-1504829857797-ddff29c27927?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=100",
-];
-
-const imageData = [photos, photos, photos, photos]
-
-// points on the grid
-// first value is row start, second value is how many rows it spans
-// third value is column start, fourth value is how many columns it spans
-const points = [
-  [11, 2, 12, 2],
-  [18, 6, 7, 1],
-  [29, 5, 12, 3],
-  [16, 10, 13, 3],
-  [30, 14, 5, 2],
+// eslint-disable-next-line import/no-anonymous-default-export
+export default [
+  {
+    id: 1,
+    imgSrc: require('../assets/design16.png')
+  },
+  {
+    id: 2,
+    imgSrc: require('../assets/design15.png')
+  },
+  {
+    id: 3,
+    imgSrc: require('../assets/design3.png')
+  },
+  {
+    id: 4,
+    imgSrc: require('../assets/design14.png')
+  },
+  {
+    id: 5,
+    imgSrc: require('../assets/design5.png')
+  },
+  {
+    id: 6,
+    imgSrc: require('../assets/design6.png')
+  },
+  {
+    id: 7,
+    imgSrc: require('../assets/design7.png')
+  },
+  {
+    id: 8,
+    imgSrc: require('../assets/design8.png')
+  },
+  {
+    id: 9,
+    imgSrc: require('../assets/design9.png')
+  },
+  {
+    id: 10,
+    imgSrc: require('../assets/design10.png')
+  },
 ]
-export { imageData, points}

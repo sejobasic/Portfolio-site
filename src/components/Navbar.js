@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import { Link } from 'react-scroll'
-import '../navbar.css'
+import '../styling/navbar.css'
+import sejo from '../assets/sejo7.png'
 
 function Navbar() {
 
@@ -9,6 +10,13 @@ function Navbar() {
 
   return (
       <div className='navbar'>
+        <div className='logo-nav'>
+        <Link to='home' spy={true} smooth={true} offset={40} duration={1000} className='logo-item' >
+          <div>
+            <img  className='logo' src={sejo} alt="sejo logo" />
+          </div>
+        </Link>
+        </div>
         <Link to='home' spy={true} smooth={true} offset={40} duration={1000} className='nav-item'>
           <div>
             <span className='nav-item-text'>HOME</span>

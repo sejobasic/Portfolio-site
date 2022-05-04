@@ -1,9 +1,8 @@
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+import './styling/home.css';
 import Home from './components/Home'
 import Projects from './components/Projects'
 import Cursor from './components/Cursor'
-import Design from './components/DesignIndex'
 import Photo from './components/Photo'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
@@ -15,11 +14,10 @@ function App() {
         <div className="App">
           <Cursor />
           <Navbar />
-          {/* <Design /> */}
           <Home />
           <Projects />
           <Photo />
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </div>
     </div>
