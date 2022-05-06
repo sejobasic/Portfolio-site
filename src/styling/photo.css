@@ -17,6 +17,7 @@
   animation: animation-photo-reel 60s infinite linear;
 }
 
+
 @keyframes animation-photo-reel {
   from {
     transform: translateX(0%)

@@ -15,18 +15,56 @@
   right: 2%;
   justify-content: flex-end;
   display: flex;
-  z-index: 1;
-  mix-blend-mode: difference;
+}
+
+.switch {
+  top: -33px;
+  left: 3%;
+  position: fixed;
+  opacity: 0;
+  display: none;
+}
+
+.sound-button {
+  position: fixed;
+  left: 20%;
+}
+
+.toggle-span {
+  left: 2000%;
+  color: #fbdce2;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.dark {
+  background-color: #131212;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.light {
+  background-color: #08372c;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .logo {
   width: 40px;
 }
 
+.navbar input {
+  z-index: 1;
+  margin-top: -50%;
+  margin-bottom: 100%;
+  height: 10%;
+  width: 50%;
+}
+
 .navbar span {
   /* display: block; */
   color: #fbdce2;
-  padding: 14px 16px;
+  padding: 14px 18px;
   font-family: neue-haas-unica, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -45,6 +83,7 @@
   display: block;
   pointer-events: none;
   position: relative;
+  z-index: 2;
 }
 
 .nav-item > div:nth-child(1) span {

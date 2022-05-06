@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: #08372c;
   isolation: isolate;
   color: #fbdce2;
   height: 100%;
@@ -16,13 +15,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.home {
-  margin-bottom: -15%;
-}
-
 .App {
   margin: 0;
   padding: 0;
+  isolation: isolate;
+}
+
+.home {
+  margin-bottom: -15%;
 }
 
 .noise::before {
