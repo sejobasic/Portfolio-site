@@ -28,8 +28,18 @@ function Projects() {
   const {x, y} = useMousePosition()
 
   return (
-    <div className='projects-main-reel'>
-      <div className='projects-reel' id='projects'>
+    <div className='projects-main-reel' id='projects'>
+      <div className='projects-reel'>
+        <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
+        <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
+        <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
+        <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
+        <div className='reel-item'>&nbsp; PROJECTS</div>
+        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
         <div className='reel-item-outline'>&nbsp; PROJECTS</div>
         <div className='reel-item'>&nbsp; PROJECTS</div>
@@ -64,9 +74,9 @@ function Projects() {
           })}
         </div>
       </div>
-      <div className='shape-container-bottom'>
+      {/* <div className='shape-container-bottom'>
       <img src={shape2} alt="shape" />
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -19,11 +19,16 @@ const [playModal] = useSound(modalsound, { volume: 0.1 });
     setTempImgSrc(imgSrc)
     setModal(true)
   }
+
+  const photoDiv = () => {
+    <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
+  }
+
  
 
   return (
-    <div className='photo-main-reel'>
-      <div className='photo-reel' id='photos'>
+    <div className='photo-main-reel' id='photos'>
+      <div className='photo-reel' >
         <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
         <div className='reel-item'>&nbsp;+</div>
         <div className='reel-item-outline'>&nbsp;DESIGN</div>

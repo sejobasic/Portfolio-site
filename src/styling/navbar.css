@@ -31,17 +31,12 @@
   left: 20%;
 }
 
-.toggle-span {
-  left: 2000%;
-  color: #fbdce2;
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 15px;
+.sound-div {
+  height: 35px;
 }
 
 .dark {
-  background-color: #131212;
+  background-color: #0f0f0f;
   transition: background-color 0.25s ease-in-out;
 }
 

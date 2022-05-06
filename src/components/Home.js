@@ -1,16 +1,16 @@
 import React from 'react'
-// import star from './assets/star1.svg'
 
 function Home() {
+  
   return (
     <div className='home'>
       <div className="container">
-          <div className="container1">
-              <div className="txt-line" id="sejo">
-                <p>Sejo Basic</p>
-              </div>
+        <div className="container1">
+          <div className="txt-line" id="sejo">
+            <p>Sejo Basic</p>
           </div>
-          <div></div>
+        </div>
+        <div></div>
       </div>
       <div className="left-side-quote">
         <p>I AM A SOFTWARE ENGINEER AND GRAPHIC DESIGNER WITH A FOCUS ON, <br /> 
@@ -21,11 +21,11 @@ function Home() {
         </p>
       </div>
       <div className="container">
-          <div></div>
-          <div className="container2">
+        <div></div>
+        <div className="container2">
           <div className='wrapper'>
             <div className="txt-line-title" id="digital">
-            <hr></hr>
+              <hr></hr>
                 <span>Creative Developer</span>
                 <span>Graphic Designer</span>
                 <span>Musician</span>
@@ -33,11 +33,8 @@ function Home() {
                 <span>Creative Developer</span>
             </div>
           </div>
-          </div>
+        </div>
       </div>
-      {/* <div className="star-svg">
-          <img src={star} alt="star icon" />
-      </div> */}
     </div>
   )
 }

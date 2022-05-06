@@ -7,7 +7,8 @@ function Title({title, setActiveIndex, index}) {
         className='project-title'
         onMouseEnter={() => setActiveIndex(index)}
         onMouseLeave={() => setActiveIndex(-1)}>
-        <div>{title}</div>
+        <div className='project-line'>{title}</div>
+        {/* <hr className='project-line'></hr> */}
       </div>
     </div>
   )

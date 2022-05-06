@@ -1,10 +1,8 @@
 import React, {useEffect, useRef} from 'react'
 
 function Cursor() {
-
     const cursorRef = useRef(null)
     const secondaryCursor = useRef(null)
-
     // Track mouse position
     // mouseX & mouseY is the current position
     // Destination of next frame position
@@ -72,11 +70,10 @@ function Cursor() {
     }, [])
 
   return (
-      <div>
-        <div className="main-cursor" ref={cursorRef}></div>
-        <div className="secondary-cursor" ref={secondaryCursor}></div>
-        {/* <img className="secondary-cursor" ref={secondaryCursor} src={cursor} alt="cursor"/> */}
-      </div>
+    <div>
+      <div className="main-cursor" ref={cursorRef}></div>
+      <div className="secondary-cursor" ref={secondaryCursor}></div>
+    </div>
   )
 }
 

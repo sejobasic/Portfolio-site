@@ -8,7 +8,7 @@
 }
 
 .photo-reel {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -16,7 +16,6 @@
   will-change: transform;
   animation: animation-photo-reel 60s infinite linear;
 }
-
 
 @keyframes animation-photo-reel {
   from {
@@ -45,18 +44,6 @@ div.flag {
   width: 100vw;
   height: 100vh;
 }
-
-/* .img-container {
-  position: absolute;
-  overflow: hidden;
-  width: 1200px;
-  height: 800px;
-  border: 1px solid wheat;
-  left: 50%;
--webkit-transform: translateX(-50%);
--moz-transform: translateX(-50%);
-transform: translateX(-50%);
-} */
 
 .gallery {
   -webkit-column-count: 3;
@@ -94,7 +81,7 @@ transform: translateX(-50%);
   justify-content: center;
   align-items: center;
   background-color: #fbdce2;
-  transition: opacity .4s ease-in, visibility .4s ease, transform .5s ease-out;
+  transition: opacity .4s ease-in, visibility .4s ease, transform .5s ease-in-out;
   visibility: hidden;
   opacity: 0;
   transform: scale(0);
@@ -121,6 +108,9 @@ transform: translateX(-50%);
   transition: transform .5s;
 }
 
+.modal .close {
+  width: 2rem;
+}
 
 .modal-img:hover {
   mix-blend-mode: exclusion;

@@ -31,15 +31,15 @@ function Media({ url, active, x, y }) {
 const [ref, { width, height }] = useSize()
 
   return (
-      <img
-        className={active && 'is-active'}
-        ref={ref}
-        src={url}
-        alt='project images'
-        style={{
-          transform: `translate(${x - width / 2}px, ${y - height / 2}px)`,
-        }}
-      />
+    <img
+      className={active && 'is-active'}
+      ref={ref}
+      src={url}
+      alt='project images'
+      style={{
+        transform: `translate(${x - width / 2}px, ${y - height / 2}px)`,
+      }}
+    />
   )
 }
 
