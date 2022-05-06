@@ -69,6 +69,7 @@ function Navbar({toggle, theme}) {
           height={20}
           width={165}
           boxShadow='none'
+          activeBoxShadow='none'
           offHandleColor='transparent'
           onHandleColor='transparent'
           onColor='transparent'
