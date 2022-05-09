@@ -83,7 +83,7 @@ div.flag {
 
 .project-wrapper {
   width: 100%;
-  padding: 0 100px;
+  padding: 0 300px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -111,6 +111,7 @@ div.flag {
 .project-list {
     z-index: 1;
     text-align: center;
+    mix-blend-mode: difference;
 }
 
 .project-item {
@@ -148,6 +149,7 @@ div.flag {
 
 .project-line {
   border-bottom: 1px solid #fbdce2;
+  mix-blend-mode: difference;
 }
 
 

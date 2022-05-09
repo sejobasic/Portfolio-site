@@ -56,9 +56,10 @@ function Projects() {
       </div>
       <div className='project-wrapper'>
         <div className='project-list'>
-          {projectData.map(({title}, index) => (
+          {projectData.map(({title, link}, index) => (
             <Title 
               title={title} 
+              link={link}
               setActiveIndex={setActiveIndex}
               index={index}
             />

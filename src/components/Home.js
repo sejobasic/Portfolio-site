@@ -13,7 +13,7 @@ function Home() {
         <div></div>
       </div>
       <div className="left-side-quote">
-        <p>I AM A SOFTWARE ENGINEER AND GRAPHIC DESIGNER WITH A FOCUS ON, <br /> 
+        <p> HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER AND GRAPHIC DESIGNER WITH A FOCUS ON, <br /> 
         BUT NOT LIMITED TO, FRONT-END DEVELOPMENT AND CREATIVE DESIGN. <br />
         WITH A BACKGROUND IN DESIGN, I BRING ARTISTIC DETAIL TO FRONT-END DEVELOPMENT. <br />
         MY PASSION FOR CREATIVITY MOTIVATES ME TO CONTINUOUSLY EXPAND MY SKILL SET <br />
@@ -25,7 +25,7 @@ function Home() {
         <div className="container2">
           <div className='wrapper'>
             <div className="txt-line-title" id="digital">
-              <hr></hr>
+              <div className='line-title'></div>
                 <span>Creative Developer</span>
                 <span>Graphic Designer</span>
                 <span>Musician</span>

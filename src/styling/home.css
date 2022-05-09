@@ -106,6 +106,10 @@ hr {
   text-align: right;
 }
 
+.line-title {
+  border-bottom: 1px solid #fbdce2;
+}
+
 @keyframes spin_words {
   10% {
     transform: translateY(-112%);
