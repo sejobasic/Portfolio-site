@@ -21,9 +21,6 @@ body {
   isolation: isolate;
 }
 
-.home {
-  margin-bottom: -15%;
-}
 
 .noise::before {
   position: fixed;
@@ -229,7 +226,6 @@ hr {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   position: fixed;
- 
 }
 
 .secondary-cursor {

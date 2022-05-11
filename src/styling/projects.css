@@ -152,8 +152,11 @@ div.flag {
   mix-blend-mode: difference;
 }
 
-
-
+.project-page {
+  height: 100vh;
+  background-color: #08372c;
+  
+}
 
 
 

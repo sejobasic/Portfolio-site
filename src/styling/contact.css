@@ -1,3 +1,9 @@
 .contact-container {
   height: 100vh;
 }
+
+.contact-title {
+  font-family: 'Aesthetic';
+  font-size: 180px;
+  text-align: center;
+}

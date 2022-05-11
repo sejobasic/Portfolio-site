@@ -64,6 +64,7 @@ div.flag {
 
 .images img {
   border-radius: 5px;
+  cursor: pointer;
   /* border: solid 1px #fbdce2; */
 }
 

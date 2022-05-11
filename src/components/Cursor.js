@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react'
-
+import '../styling/home.css';
 function Cursor() {
     const cursorRef = useRef(null)
     const secondaryCursor = useRef(null)

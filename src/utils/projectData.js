@@ -1,16 +1,23 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
+
   {
-    title: '¹ Layr Sequencer ',
+    id: 0,
+    title: '¹ Layr Sequencer',
     mediaUrl: require('../assets/layr.png'),
-    link: 'https://www.w3schools.com/js/js_json_objects.asp'
+    link: '/layr'
   },
   {
+    id: 1,
     title: '² Simple Fridge',
-    mediaUrl: require('../assets/simple.png')
+    mediaUrl: require('../assets/simple.png'),
+    link: '/simple'
   },
   {
+    id: 2,
     title: '³ Trails',
-    mediaUrl: require('../assets/trails.png')
+    mediaUrl: require('../assets/trails.png'),
+    link: '/trails'
   },
 ]
+

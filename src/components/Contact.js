@@ -3,14 +3,17 @@ import '../styling/contact.css'
 function Contact() {
   return (
     <div className='contact-container' id='contact'>
-      <h1>CONTACT SECTION HERE</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
-      <h1>Test</h1>
+      <div className='contact-title-container'>
+      </div>
+      <div className='contact-contents-container'>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+        <h1>Test</h1>
+      </div>
     </div>
   )
 }
