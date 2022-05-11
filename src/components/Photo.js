@@ -20,12 +20,6 @@ const [playModal] = useSound(modalsound, { volume: 0.1 });
     setModal(true)
   }
 
-  const photoDiv = () => {
-    <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-  }
-
- 
-
   return (
     <div className='photo-main-reel' id='photos'>
       <div className='photo-reel' >

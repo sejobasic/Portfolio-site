@@ -158,5 +158,93 @@ div.flag {
   
 }
 
+.project-text {
+  font-size: 15px;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -6%;
+}
+
+.project-text-container {
+  margin-top: -5%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.project-header {
+  font-family: 'Aesthetic';
+  text-transform: uppercase;
+  font-size: 100px;
+  text-align: center;
+}
+
+.project-image-container {
+  margin-top: 1%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.project-image {
+  max-width: 50%;
+}
+
+
+.link-tag {
+  font-size: 15px;
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fbdce2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 7px;
+}
+
+.link-tag.next {
+  position: absolute;
+  right: 16px;
+}
+
+.link-tag.home {
+  left: 16px;
+}
+
+.link-tag:visited {
+  /* color: #929292; */
+  opacity: 0;
+}
+
+.link-tag::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fbdce2;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link-tag:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
 
 

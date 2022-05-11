@@ -6,12 +6,6 @@ import { motion } from 'framer-motion'
 
 function Title({ title, setActiveIndex, index, link }) {
   return (
-    <motion.div 
-      className='project-item'
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-    >
       <Link to={link}>
       <div className='project-item'>
         <div 
@@ -22,7 +16,6 @@ function Title({ title, setActiveIndex, index, link }) {
         </div>
       </div>
       </Link>
-    </motion.div>
   )
 }
 
