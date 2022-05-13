@@ -3,6 +3,8 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import shape2 from '../assets/shape2.png'
 import '../styling/contact.css'
+import '../styling/home.css';
+import '../styling/navbar.css';
 
 function Contact() {
   const controls = useAnimation();
