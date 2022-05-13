@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import ReactSwitch from 'react-switch'
 import useSound from 'use-sound';
 import switchsound from '../assets/switch.mp3'
@@ -10,14 +11,26 @@ function Navbar({toggle, theme}) {
   const [play] = useSound(switchsound, { volume: 0.25 });
 
   return (
-      <div className='navbar'>
-        <div className='logo-nav'>
+      <motion.div 
+        className='navbar'
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1, duration: 2 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <motion.div 
+          className='logo-nav'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3, duration: 2.5 }}
+        >
           <Link to='home' spy={true} smooth={true} offset={40} duration={1000} className='logo-item' >
             <div>
               <img  className='logo' src={sejo} alt="sejo logo" />
             </div>
           </Link>
-        </div>
+        </motion.div>
         <Link to='home' spy={true} smooth={true} offset={40} duration={1000} className='nav-item'>
           <div>
             <span className='nav-item-text'>HOME</span>
@@ -39,7 +52,7 @@ function Navbar({toggle, theme}) {
           </div>
         </Link>
         <div className='sound-div' onClick={play}>
-          <span className='nav-item-text'>{theme === 'light' ? 'TURN OFF THE LIGHT' : 'TURN ON THE LIGHT'}
+          <span className='nav-item-text'>{theme === 'light' ? 'TURN OFF THE LIGHTS' : 'TURN ON THE LIGHTS'}
           </span>
           <ReactSwitch 
             onChange={toggle}
@@ -58,7 +71,7 @@ function Navbar({toggle, theme}) {
             className='switch'
           />
         </div>
-      </div>
+      </motion.div>
   )
 }
 

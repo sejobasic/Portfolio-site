@@ -21,6 +21,9 @@ body {
   isolation: isolate;
 }
 
+.home {
+  overflow-x:hidden
+}
 
 .noise::before {
   position: fixed;
@@ -43,9 +46,8 @@ body {
   width: 100%;
   top: -120px;
   position: relative;
-  cursor: none;
+  will-change: transform;
 }
-
 
 .container1 {
   display: flex;
@@ -54,7 +56,7 @@ body {
   height: 100%;
   justify-content: center;
   overflow: hidden;
-  cursor: none;
+  will-change: transform;
 }
 
 .txt-line {
@@ -101,6 +103,7 @@ hr {
   font-family: 'Aesthetic';
   animation: spin_words 6s infinite;
   text-align: right;
+  will-change: transform;
 }
 
 .line-title {
@@ -239,6 +242,7 @@ hr {
   border-radius: 50%;
   mix-blend-mode: difference;
 }
+
 
 
 

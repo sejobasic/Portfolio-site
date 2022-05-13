@@ -6,6 +6,7 @@ import Simple from '../pages/Simple'
 import Trails from '../pages/Trails'
 import Home from '../components/Home'
 
+
 function AnimatedRoutes() {
 
   const location = useLocation()

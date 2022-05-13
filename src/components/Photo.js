@@ -1,4 +1,6 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 import '../styling/photo.css'
 import close from '../assets/close.png'
 import designData  from '../utils/designData'
@@ -18,6 +20,29 @@ const [playModal] = useSound(modalsound, { volume: 0.1 });
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc)
     setModal(true)
+  }
+
+  const controls = useAnimation();
+  const { ref, inView } = useInView();  
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+    if (!inView) {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const photoVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5, 
+        duration: 1
+      }
+    }
   }
 
   return (
@@ -55,7 +80,13 @@ const [playModal] = useSound(modalsound, { volume: 0.1 });
         </div>
         <p>PHOTOGRAPHY AND DESIGN WORK BY SEJO BASIC</p>
       </div>
-      <div className='gallery'>
+      <motion.div 
+        className='gallery'
+        initial='hidden'
+        animate={controls}
+        variants={photoVariant}
+        ref={ref}
+      >
         {designData.map((item, index) => {
           return (
             <div className='images' key={index} onClick={() => getImg(item.imgSrc)}>
@@ -63,7 +94,7 @@ const [playModal] = useSound(modalsound, { volume: 0.1 });
             </div>
           )
         })}
-      </div>
+      </motion.div>
     </div>
   )
 }

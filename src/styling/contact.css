@@ -1,9 +1,33 @@
-.contact-container {
-  height: 100vh;
+.contact-main-reel {
+  width: 100%;
+  overflow: hidden;
+  display: fixed;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10%;
 }
 
-.contact-title {
-  font-family: 'Aesthetic';
-  font-size: 180px;
+.contact-reel {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  will-change: transform;
+  animation: animation-contact-reel 60s infinite linear;
+}
+
+@keyframes animation-contact-reel {
+  from {
+    transform: translateX(0%)
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+.contact-contents {
   text-align: center;
+  justify-content: center;
 }

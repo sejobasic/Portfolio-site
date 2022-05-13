@@ -17,6 +17,7 @@
   animation: animation-reel 60s infinite linear;
 }
 
+
 @keyframes animation-reel {
   from {
     transform: translateX(0%)
@@ -44,37 +45,16 @@ div.flag {
   margin-top: 2%;
 }
 
-.shape-container:hover img {
-  animation-name: rotate; 
-  animation-duration: 2s; 
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
 .shape-container img {
-  width: 7%;
-  position: relative;
-  z-index: 1;
-}
-
-.shape-container-bottom {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.shape-container-bottom:hover img {
   animation-name: rotate; 
   animation-duration: 2s; 
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-}
-
-.shape-container-bottom img {
-  width: 7%;
+  max-width: 120px;
   position: relative;
   z-index: 1;
 }
+
 
 @keyframes rotate {
   from {transform: rotate(0deg);}
@@ -154,8 +134,6 @@ div.flag {
 
 .project-page {
   height: 100vh;
-  background-color: #08372c;
-  
 }
 
 .project-text {
@@ -184,7 +162,6 @@ div.flag {
 }
 
 .project-image-container {
-  margin-top: 1%;
   display: flex;
   position: relative;
   align-items: center;

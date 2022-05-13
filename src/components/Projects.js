@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 import '../styling/projects.css'
 import shape2 from '../assets/shape2.png'
 import projectData from '../utils/projectData'
@@ -28,6 +30,42 @@ function Projects() {
   const [activeIndex, setActiveIndex] = useState(-1)
   const {x, y} = useMousePosition()
 
+  const controls = useAnimation();
+  const { ref, inView } = useInView();  
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+    if (!inView) {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
+
+  const projectVariant = {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0, 
+      opacity: 1,
+      transition: {
+        delay: 0.5, 
+        duration: 1
+      }
+    }
+  }
+
+  const shapeVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 1, 
+        duration: 2
+      }
+    }
+  }
+  
+
   return (
     <div className='projects-main-reel' id='projects'>
       <div className='projects-reel'>
@@ -52,21 +90,33 @@ function Projects() {
         <div className='reel-item'>&nbsp; PROJECTS</div>
         <div className='reel-item-outline'>&nbsp; PROJECTS</div>
       </div>
-      <div className='shape-container'>
-      <img src={shape2} alt="shape" />
-      </div>
+      <motion.div 
+        className='shape-container'
+        initial='hidden'
+        animate={controls}
+        variants={shapeVariant}
+        ref={ref}
+      >
+        <img src={shape2} alt="shape" />
+      </motion.div>
       <div className='project-wrapper'>
-        <div className='project-list'>
-          {projectData.map(({title, id, link}, index) => (
-            <Title 
-              id={id}
-              link={link}
-              title={title} 
-              setActiveIndex={setActiveIndex}
-              index={index}
-            />
-          ))}
-        </div>
+          <motion.div 
+            className='project-list'
+            initial='hidden'
+            animate={controls}
+            variants={projectVariant}
+            ref={ref}
+          >
+            {projectData.map(({title, id, link}, index) => (
+              <Title 
+                id={id}
+                link={link}
+                title={title} 
+                setActiveIndex={setActiveIndex}
+                index={index}
+              />
+            ))}
+          </motion.div>
         <div className='project-media'>
           {projectData.map(({ mediaUrl }, index) => {
             const isActive = index === activeIndex
@@ -77,9 +127,6 @@ function Projects() {
           })}
         </div>
       </div>
-      {/* <div className='shape-container-bottom'>
-      <img src={shape2} alt="shape" />
-      </div> */}
     </div>
   )
 }

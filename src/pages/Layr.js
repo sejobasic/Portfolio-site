@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import '../styling/projects.css'
 import { Link } from 'react-router-dom'
 import layr from '../assets/layr.png'
-
+import '../styling/home.css';
+import '../styling/navbar.css';
 
 
 function Layr() {
@@ -12,9 +13,9 @@ function Layr() {
     <div className='noise'>
       <motion.div 
         className='project-page'
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
+        initial={{width: 0, opacity: 0}}
+        animate={{width: '100%', opacity: 1}}
+        exit={{x: window.innerWidth, transition: { duration: 0.4 }}}
       >
       <div className='project-links'>
       <Link to='/'>
