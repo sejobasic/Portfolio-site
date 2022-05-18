@@ -187,6 +187,9 @@ div.flag {
   display: inline-block;
   position: relative;
   padding: 7px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+border: none;
 }
 
 .link-tag.next {

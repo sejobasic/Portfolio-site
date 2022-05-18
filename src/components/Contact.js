@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react'
+import {saveAs} from 'file-saver';
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 import shape2 from '../assets/shape2.png'
+import img from '../assets/sejobasic-resume.pdf';
 import '../styling/contact.css'
 import '../styling/home.css';
 import '../styling/navbar.css';
@@ -40,6 +43,10 @@ function Contact() {
     }
   }
 
+  function downloadImage() {
+    saveAs(img, 'sejobasic-resume.pdf');
+  }
+
   return (
     <div className='contact-main-reel'>
       <div className='contact-reel'>
@@ -74,7 +81,7 @@ function Contact() {
         >
          <a 
           className='link-tag' 
-          href='https://github.com/sejobasic/Layr-Sequencer' 
+          href='mailto:sejobasicwork@gmail.com' 
           target="_blank" 
           rel="noreferrer">EMAIL</a>
          </motion.div>
@@ -88,7 +95,7 @@ function Contact() {
         >
          <a 
           className='link-tag' 
-          href='https://github.com/sejobasic/Layr-Sequencer' 
+          href='http://www.linkedin.com/in/sejo-basic' 
           target="_blank" 
           rel="noreferrer">LINKEDIN</a>
          </motion.div> 
@@ -102,7 +109,7 @@ function Contact() {
         >
          <a 
           className='link-tag' 
-          href='https://github.com/sejobasic/Layr-Sequencer' 
+          href='https://github.com/sejobasic' 
           target="_blank" 
           rel="noreferrer">GITHUB</a>
          </motion.div>
@@ -116,7 +123,7 @@ function Contact() {
         >
          <a 
           className='link-tag' 
-          href='https://github.com/sejobasic/Layr-Sequencer' 
+          href='https://codesandbox.io/u/sejobasic/' 
           target="_blank" 
           rel="noreferrer">CODE SANDBOX</a>
          </motion.div>
@@ -130,7 +137,7 @@ function Contact() {
         >
          <a 
           className='link-tag' 
-          href='https://github.com/sejobasic/Layr-Sequencer' 
+          href='https://www.instagram.com/sejoforever/?hl=en' 
           target="_blank" 
           rel="noreferrer">INSTAGRAM</a>
          </motion.div>
@@ -140,12 +147,25 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.7, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.5, duration: 2, type: 'tween' }}
         >
          <a 
           className='link-tag' 
-          href='https://github.com/sejobasic/Layr-Sequencer' 
+          href='https://medium.com/@sejobasic' 
           target="_blank" 
+          rel="noreferrer">BLOG</a>
+         </motion.div>
+         <motion.div
+          className='contact-contents'
+          variants={item1}
+          initial='hidden'
+          animate={controls}
+          ref={ref}
+          transition={{ delay: 0.7, duration: 2, type: 'tween' }}
+        >
+         <a
+          className='link-tag'
+          onClick={downloadImage}
           rel="noreferrer">RESUME</a>
          </motion.div>
          <motion.div 

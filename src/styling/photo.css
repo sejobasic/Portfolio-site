@@ -46,13 +46,17 @@ div.flag {
 }
 
 .gallery {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
+  -webkit-column-count: 7;
+  -moz-column-count: 7;
+  column-count: 7;
   -webkit-column-width: 33%;
   -moz-column-width: 33%;
   column-width: 33%;
   padding: 0 30px;
+}
+
+.gallery img {
+  width: 100%;
 }
 
 .gallery .images {
@@ -60,6 +64,7 @@ div.flag {
   transition: all 350ms ease;
   margin-bottom: 12px;
   position: relative;
+  width: 100%;
 }
 
 .images img {
@@ -141,6 +146,12 @@ div.flag {
 
 .close:hover {
   transform: scale(1.3)
+}
+
+.load-btn {
+  justify-content: center;
+  text-align: center;
+  background-color: Transparent;
 }
 
 @media (max-width: 991px) {

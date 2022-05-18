@@ -4,18 +4,34 @@ import { useInView } from 'react-intersection-observer';
 import '../styling/photo.css'
 import close from '../assets/close.png'
 import designData  from '../utils/designData'
+import photoData  from '../utils/photoData'
 import Tilt from 'react-parallax-tilt';
 import useSound from 'use-sound';
 import photosound from '../assets/wand.wav'
 import modalsound from '../assets/fairy.wav'
+import loadsound from '../assets/pop2.wav'
+import lesssound from '../assets/pop.wav'
 
 
 function Photo() {
 const [modal, setModal] = useState(false)
 const [tempImgSrc, setTempImgSrc] = useState('')
+const [visible, setVisible] = useState(11)
+
+const showMoreItems = () => {
+  setVisible(prevValue => prevValue + 5)
+  playLoad()
+}
+
+const showLessItems = () => {
+  setVisible(prevValue => prevValue - 10)
+  playLess()
+}
 
 const [playPhoto] = useSound(photosound, { volume: 0.1 });
 const [playModal] = useSound(modalsound, { volume: 0.1 });
+const [playLoad] = useSound(loadsound, { volume: 0.1 });
+const [playLess] = useSound(lesssound, { volume: 0.1 });
 
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc)
@@ -87,13 +103,29 @@ const [playModal] = useSound(modalsound, { volume: 0.1 });
         variants={photoVariant}
         ref={ref}
       >
-        {designData.map((item, index) => {
+        {designData.slice(0, visible).map((item, index) => {
           return (
             <div className='images' key={index} onClick={() => getImg(item.imgSrc)}>
-              <img onClick={playPhoto} src={item.imgSrc} alt='photography' style={{width: '100%'}} />
+              <img onClick={playPhoto} src={item.imgSrc} alt='photography' />
             </div>
           )
         })}
+        {photoData.slice(0, visible).map((item, index) => {
+          return (
+            <div className='images' key={index} onClick={() => getImg(item.imgSrc)}>
+              <img onClick={playPhoto} src={item.imgSrc} alt='photography' />
+            </div>
+          )
+        })}
+        </motion.div>
+      <motion.div 
+        className='load-btn'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1}}
+      >
+        <button  className='link-tag' onClick={showMoreItems}>LOAD MORE</button>
+        <button className='link-tag' onClick={showLessItems}>LOAD LESS</button>
       </motion.div>
     </div>
   )
