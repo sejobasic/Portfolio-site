@@ -21,6 +21,9 @@ function Navbar({toggle, theme}) {
       >
         <motion.div 
           className='logo-nav'
+          drag
+          dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
+          dragElastic={0.7}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 2.5 }}

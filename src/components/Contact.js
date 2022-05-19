@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import {saveAs} from 'file-saver';
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import Marquee from "react-fast-marquee";
 import shape2 from '../assets/shape2.png'
 import img from '../assets/sejobasic-resume.pdf';
 import '../styling/contact.css'
@@ -48,30 +49,22 @@ function Contact() {
   }
 
   return (
-    <div className='contact-main-reel'>
-      <div className='contact-reel'>
-        <div className='reel-item'>&nbsp;WORK</div>
-        <div className='reel-item-outline'>&nbsp;WITH</div>
-        <div className='reel-item'>&nbsp;ME</div>
-        <div className='reel-item-outline'>&nbsp;WORK</div>
-        <div className='reel-item'>&nbsp;WITH</div>
-        <div className='reel-item-outline'>&nbsp;ME</div>
-        <div className='reel-item'>&nbsp;WORK</div>
-        <div className='reel-item-outline'>&nbsp;WITH</div>
-        <div className='reel-item'>&nbsp;ME</div>
-        <div className='reel-item-outline'>&nbsp;WORK</div>
-        <div className='reel-item'>&nbsp;WITH</div>
-        <div className='reel-item-outline'>&nbsp;ME</div>
-        <div className='reel-item'>&nbsp;WORK</div>
-        <div className='reel-item-outline'>&nbsp;WITH</div>
-        <div className='reel-item'>&nbsp;ME</div>
-        <div className='reel-item-outline'>&nbsp;WORK</div>
-        <div className='reel-item'>&nbsp;WITH</div>
-        <div className='reel-item-outline'>&nbsp;ME</div>
-      </div>
+    <div className='contact-main-reel' id='contact'>
+       <Marquee
+        speed={80}
+        gradient={false}
+      >
+        <div className='contact-reel'>
+          <div className='reel-item'>&nbsp;WORK</div>
+          <div className='reel-item-outline'>&nbsp;WITH</div>
+          <div className='reel-item'>&nbsp;ME</div>
+          <div className='reel-item-outline'>&nbsp;WORK</div>
+          <div className='reel-item'>&nbsp;WITH</div>
+          <div className='reel-item-outline'>&nbsp;ME</div>
+        </div>
+      </Marquee>
       <div className='contact-links'>
         <motion.div
-          id='contact'
           className='contact-contents'
           variants={item1}
           initial='hidden'

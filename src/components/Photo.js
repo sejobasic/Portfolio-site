@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import Marquee from "react-fast-marquee";
 import '../styling/photo.css'
 import close from '../assets/close.png'
 import designData  from '../utils/designData'
@@ -24,7 +25,7 @@ const showMoreItems = () => {
 }
 
 const showLessItems = () => {
-  setVisible(prevValue => prevValue - 10)
+  setVisible(prevValue => prevValue - 5)
   playLess()
 }
 
@@ -63,28 +64,18 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
 
   return (
     <div className='photo-main-reel' id='photos'>
-      <div className='photo-reel' >
-        <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item-outline'>&nbsp;DESIGN</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item-outline'>&nbsp;DESIGN</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item-outline'>&nbsp;DESIGN</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item-outline'>&nbsp;DESIGN</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-        <div className='reel-item'>&nbsp;+</div>
-        <div className='reel-item-outline'>&nbsp;DESIGN</div>
-        <div className='reel-item'>&nbsp;+</div>
-      </div>
+       <Marquee
+        className='marquee'
+        speed={80}
+        gradient={false}
+      >
+        <div className='photo-reel' >
+          <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
+          <div className='reel-item'>&nbsp;+</div>
+          <div className='reel-item-outline'>&nbsp;DESIGN</div>
+          <div className='reel-item'>&nbsp;+</div>
+        </div>
+      </Marquee>
       <div  className={modal ? 'modal open' : 'modal'}>
         <Tilt glareEnable={true} glareColor='#fbdce2' glarePosition='all' glareMaxOpacity={0.5} perspective={800} gyroscope={true} tiltMaxAngleX={35} tiltMaxAngleY={35}>
           <div onClick={playModal} >
@@ -105,16 +96,30 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
       >
         {designData.slice(0, visible).map((item, index) => {
           return (
-            <div className='images' key={index} onClick={() => getImg(item.imgSrc)}>
+            <motion.div 
+              drag 
+              dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
+              dragElastic={0.7}
+              className='images' 
+              key={index} 
+              onClick={() => getImg(item.imgSrc)}
+            >
               <img onClick={playPhoto} src={item.imgSrc} alt='photography' />
-            </div>
+            </motion.div>
           )
         })}
         {photoData.slice(0, visible).map((item, index) => {
           return (
-            <div className='images' key={index} onClick={() => getImg(item.imgSrc)}>
+            <motion.div
+              drag 
+              dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
+              dragElastic={0.7}
+              className='images' 
+              key={index} 
+              onClick={() => getImg(item.imgSrc)}
+            >
               <img onClick={playPhoto} src={item.imgSrc} alt='photography' />
-            </div>
+            </motion.div>
           )
         })}
         </motion.div>

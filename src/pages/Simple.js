@@ -1,10 +1,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import useSound from 'use-sound';
+import wooshsound from '../assets/woosh1.wav'
+
 import '../styling/projects.css'
 import { Link } from 'react-router-dom'
 import simple from '../assets/simple.png'
 
 function Simple() {
+  const [playWoosh] = useSound(wooshsound, { volume: 0.1 });
+
   return (
     <div className='noise'>
       <motion.div 
@@ -15,10 +20,10 @@ function Simple() {
       >
       <div className='project-links'>
         <Link to='/'>
-          <p className='link-tag home'>HOME</p>
+          <p onClick={playWoosh} className='link-tag home'>HOME</p>
         </Link>
         <Link to='/trails'>
-          <p className='link-tag next'>NEXT PROJECT</p>
+          <p onClick={playWoosh} className='link-tag next'>NEXT PROJECT</p>
         </Link>
       </div>
       <div className='project-image-container'>

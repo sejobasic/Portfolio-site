@@ -1,6 +1,7 @@
 .contact-main-reel {
   width: 100%;
   height: 100vh;
+  margin-top: 5%;
   overflow: hidden;
   display: fixed;
   flex-direction: column;
@@ -8,22 +9,13 @@
 }
 
 .contact-reel {
-  margin-top: 70px;
+  margin-top: -30px;
   display: flex;
   align-items: center;
   white-space: nowrap;
   width: fit-content;
   will-change: transform;
   animation: animation-contact-reel 60s infinite linear;
-}
-
-@keyframes animation-contact-reel {
-  from {
-    transform: translateX(0%)
-  }
-  to {
-    transform: translateX(-100%);
-  }
 }
 
 .contact-contents {

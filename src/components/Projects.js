@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
+import Marquee from "react-fast-marquee";
 import '../styling/projects.css'
 import shape2 from '../assets/shape2.png'
 import projectData from '../utils/projectData'
@@ -64,32 +65,18 @@ function Projects() {
       }
     }
   }
-  
 
   return (
     <div className='projects-main-reel' id='projects'>
-      <div className='projects-reel'>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-        <div className='reel-item'>&nbsp; PROJECTS</div>
-        <div className='reel-item-outline'>&nbsp; PROJECTS</div>
-      </div>
+      <Marquee
+        speed={80}
+        gradient={false}
+      >
+        <div className='projects-reel'>
+          <div className='reel-item'>&nbsp; PROJECTS</div>
+          <div className='reel-item-outline'>&nbsp; PROJECTS</div>
+        </div>
+      </Marquee>
       <motion.div 
         className='shape-container'
         initial='hidden'
