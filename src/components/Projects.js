@@ -69,16 +69,19 @@ function Projects() {
   return (
     <div className='projects-main-reel' id='projects'>
       <Marquee
-        speed={80}
+        speed={100}
         gradient={false}
       >
         <div className='projects-reel'>
-          <div className='reel-item'>&nbsp; PROJECTS</div>
-          <div className='reel-item-outline'>&nbsp; PROJECTS</div>
+          <span className='reel-item'>&nbsp; PROJECTS</span>
+          <span className='reel-item-outline'>&nbsp; PROJECTS</span>
         </div>
       </Marquee>
       <motion.div 
         className='shape-container'
+        drag
+        dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
+        dragElastic={0.7}
         initial='hidden'
         animate={controls}
         variants={shapeVariant}

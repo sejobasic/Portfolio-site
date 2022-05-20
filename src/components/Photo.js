@@ -56,8 +56,8 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5, 
-        duration: 1
+        delay: 0.3, 
+        duration: 0.5
       }
     }
   }
@@ -66,14 +66,14 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
     <div className='photo-main-reel' id='photos'>
        <Marquee
         className='marquee'
-        speed={80}
+        speed={100}
         gradient={false}
       >
         <div className='photo-reel' >
-          <div className='reel-item'>&nbsp;PHOTOGRAPHY</div>
-          <div className='reel-item'>&nbsp;+</div>
-          <div className='reel-item-outline'>&nbsp;DESIGN</div>
-          <div className='reel-item'>&nbsp;+</div>
+          <span className='reel-item'>&nbsp;PHOTOGRAPHY</span>
+          <span className='reel-item'>&nbsp;+</span>
+          <span className='reel-item-outline'>&nbsp;DESIGN</span>
+          <span className='reel-item'>&nbsp;+</span>
         </div>
       </Marquee>
       <div  className={modal ? 'modal open' : 'modal'}>

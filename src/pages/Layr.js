@@ -34,8 +34,7 @@ function Layr() {
       <div className='project-text-container'>
         <p className='project-header'>Layr Sequencer</p>
         <p className='project-text'>
-            Layr Sequencer is the capstone project that i made during my time at a Coding Bootcamp.<br />
-            It is built with a React Front-end and Rails Back-end for Authentication.<br />
+            Layr Sequencer is built with a React Front-end and Rails Back-end for Authentication. <br />
             Coming from a musical background i really wanted to do something a bit different<br />
             that was interactive and work with audio. The Layr Sequencer features a 16-Step Sequencer page<br /> 
             and a Jam page with a Piano and Drum Pad. This project very quickly became a passion project<br /> 

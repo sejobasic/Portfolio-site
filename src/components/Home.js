@@ -34,13 +34,13 @@ function Home() {
   }, [controls, inView]);
 
   const titleVariant = {
-    hidden: { x: -1000, opacity: 0 },
+    hidden: { x: '-100vw', opacity: 0 },
     visible: {
       x: 10, 
       opacity: 1,
       transition: {
-        delay: 0.3, 
-        duration: 3, 
+        delay: 0.2, 
+        duration: 2, 
         type: 'tween'
       }
     }
@@ -51,7 +51,7 @@ function Home() {
     visible: {
       opacity: 1,
       transition: {
-        delay: 3, 
+        delay: 2, 
         duration: 3, 
         type: 'tween'
       }
@@ -59,13 +59,13 @@ function Home() {
   }
 
   const roleVariant = {
-    hidden: { x: 1100, opacity: 0 },
+    hidden: { x: '100vw', opacity: 0 },
     visible: {
       x: 0, 
       opacity: 1,
       transition: {
-        delay: 0.3, 
-        duration: 3, 
+        delay: 0.2, 
+        duration: 2, 
         type: 'tween'
       }
     }
@@ -78,13 +78,12 @@ function Home() {
         <div className='noise'>
           <div className='App'>
             <Navbar theme={theme} toggle={toggleTheme} />
-            <div className="container">
+            <div ref={ref} className="container">
               <motion.div 
                 className="container1"
                 initial='hidden'
                 animate={controls}
                 variants={titleVariant}
-                ref={ref}
               >
                 <div className="txt-line" id="sejo">
                   <p>Sejo Basic</p>
@@ -97,23 +96,22 @@ function Home() {
               initial='hidden'
               animate={controls}
               variants={quoteVariant}
-              ref={ref}
             >
-              <p> HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER AND GRAPHIC DESIGNER WITH A FOCUS ON, <br /> 
+              <p ref={ref} > HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER AND GRAPHIC DESIGNER WITH A FOCUS ON, <br /> 
               BUT NOT LIMITED TO, FRONT-END DEVELOPMENT AND CREATIVE DESIGN. <br />
               WITH A BACKGROUND IN DESIGN, I BRING ARTISTIC DETAIL TO FRONT-END DEVELOPMENT. <br />
               MY PASSION FOR CREATIVITY MOTIVATES ME TO CONTINUOUSLY EXPAND MY SKILL SET <br />
               THROUGH NEW TECHNOLOGIES, INSPIRE OTHERS, AND WORK COLLECTIVELY TO BRING NEW IDEAS TO LIFE.
               </p>
             </motion.div>
-            <div className="container">
+            <div ref={ref} className="container">
               <div></div>
               <motion.div 
                 className="container2"                     
                 animate={controls}
                 variants={roleVariant}
-                ref={ref}>
-                <div className='wrapper'>
+              >
+                <div ref={ref} className='wrapper'>
                   <div className="txt-line-title" id="digital">
                     <div className='line-title'></div>
                       <span>Creative Developer</span>

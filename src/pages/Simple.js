@@ -32,11 +32,11 @@ function Simple() {
       <div className='project-text-container'>
         <p className='project-header'>Simple Fridge</p>
         <p className='project-text'>
-          Simple Fridge was built with a React Front-end and Ruby/Sinatra Back-end.<br />
-          It was created during a 1-week Group Project sprint at Flatiron School.<br />
+          Simple Fridge was built with a React Front-end and Ruby/Sinatra Back-end. <br />
+          It was created during a 1-week Group Project sprint at Flatiron School. <br />
           Simple Fridge is an easy to use application that keeps track of the grocery<br />
-          items in your fridge and shows how many days left until the items expire.<br />
-          The user has the ability to add new items and remove current items from their fridge.<br /> 
+          items in your fridge and shows how many days left until the items expire. <br />
+          The user has the ability to add new items and remove current items from their fridge. <br /> 
         </p>
         <div className='link-container'>
           <a className='link-tag' href='https://github.com/weiwei-out/MagicFridge' target="_blank" rel="noreferrer">GITHUB</a>

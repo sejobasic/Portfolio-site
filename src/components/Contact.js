@@ -51,16 +51,16 @@ function Contact() {
   return (
     <div className='contact-main-reel' id='contact'>
        <Marquee
-        speed={80}
+        speed={100}
         gradient={false}
       >
         <div className='contact-reel'>
-          <div className='reel-item'>&nbsp;WORK</div>
-          <div className='reel-item-outline'>&nbsp;WITH</div>
-          <div className='reel-item'>&nbsp;ME</div>
-          <div className='reel-item-outline'>&nbsp;WORK</div>
-          <div className='reel-item'>&nbsp;WITH</div>
-          <div className='reel-item-outline'>&nbsp;ME</div>
+          <span className='reel-item'>&nbsp;WORK</span>
+          <span className='reel-item-outline'>&nbsp;WITH</span>
+          <span className='reel-item'>&nbsp;ME</span>
+          <span className='reel-item-outline'>&nbsp;WORK</span>
+          <span className='reel-item'>&nbsp;WITH</span>
+          <span className='reel-item-outline'>&nbsp;ME</span>
         </div>
       </Marquee>
       <div className='contact-links'>
@@ -70,7 +70,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.3, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.3, duration: 1, type: 'tween' }}
         >
          <a 
           className='link-tag' 
@@ -84,7 +84,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.2, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.2, duration: 1, type: 'tween' }}
         >
          <a 
           className='link-tag' 
@@ -98,7 +98,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.4, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.4, duration: 1, type: 'tween' }}
         >
          <a 
           className='link-tag' 
@@ -112,7 +112,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.6, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.6, duration: 1, type: 'tween' }}
         >
          <a 
           className='link-tag' 
@@ -126,7 +126,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.5, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.5, duration: 1, type: 'tween' }}
         >
          <a 
           className='link-tag' 
@@ -140,7 +140,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.5, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.5, duration: 1, type: 'tween' }}
         >
          <a 
           className='link-tag' 
@@ -154,7 +154,7 @@ function Contact() {
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.7, duration: 2, type: 'tween' }}
+          transition={{ delay: 0.7, duration: 1, type: 'tween' }}
         >
          <a
           className='link-tag'
@@ -163,6 +163,9 @@ function Contact() {
          </motion.div>
          <motion.div 
         className='shape-container'
+        drag
+        dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
+        dragElastic={0.7}
         initial='hidden'
         animate={controls}
         variants={shapeVariant}
