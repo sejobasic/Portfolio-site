@@ -15,7 +15,7 @@ function Navbar({toggle, theme}) {
         className='navbar'
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 2 }}
+        transition={{ delay: 1, duration: 3 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >

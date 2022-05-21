@@ -23,14 +23,50 @@ function Contact() {
     }
   }, [controls, inView]);
 
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      }
+    }
+  }
+
   const item1 = {
     hidden: { opacity: 0, x: '100vw' },
-    visible: { opacity: 1, x: 0 }
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: {
+        delay: 0.8, 
+        duration: 1
+      }
+    }
   }
 
   const item2 = {
     hidden: { opacity: 0, x: '-100vw' },
-    visible: { opacity: 1, x: 0 }
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: {
+        delay: 0.5, 
+        duration: 1
+      }
+    }
+  }
+
+  const item3 = {
+    hidden: { opacity: 0, x: '-100vw' },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: {
+        delay: 0.2, 
+        duration: 1
+      }
+    }
   }
 
   const shapeVariant = {
@@ -66,111 +102,84 @@ function Contact() {
       <div className='contact-links'>
         <motion.div
           className='contact-contents'
-          variants={item1}
+          variants={container}
           initial='hidden'
           animate={controls}
           ref={ref}
-          transition={{ delay: 0.3, duration: 1, type: 'tween' }}
         >
-         <a 
-          className='link-tag' 
-          href='mailto:sejobasicwork@gmail.com' 
-          target="_blank" 
-          rel="noreferrer">EMAIL</a>
-         </motion.div>
-         <motion.div
-          className='contact-contents'
-          variants={item2}
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item1}
+              href='mailto:sejobasicwork@gmail.com' 
+              target="_blank" 
+              rel="noreferrer">EMAIL
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item2}
+              href='http://www.linkedin.com/in/sejo-basic' 
+              target="_blank" 
+              rel="noreferrer">LINKEDIN
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item3} 
+              href='https://github.com/sejobasic' 
+              target="_blank" 
+              rel="noreferrer">GITHUB
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item2} 
+              href='https://codesandbox.io/u/sejobasic/' 
+              target="_blank" 
+              rel="noreferrer">CODE SANDBOX
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item3} 
+              href='https://www.instagram.com/sejoforever/?hl=en' 
+              target="_blank" 
+              rel="noreferrer">INSTAGRAM
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item2} 
+              href='https://medium.com/@sejobasic' 
+              target="_blank" 
+              rel="noreferrer">BLOG
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a
+              className='link-tag'
+              variants={item1}
+              onClick={downloadImage}
+              rel="noreferrer">RESUME
+            </motion.a>
+          </div>
+        </motion.div>
+        <motion.div 
+          className='shape-container'
+          drag
+          dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
+          dragElastic={0.7}
           initial='hidden'
           animate={controls}
+          variants={shapeVariant}
           ref={ref}
-          transition={{ delay: 0.2, duration: 1, type: 'tween' }}
         >
-         <a 
-          className='link-tag' 
-          href='http://www.linkedin.com/in/sejo-basic' 
-          target="_blank" 
-          rel="noreferrer">LINKEDIN</a>
-         </motion.div> 
-         <motion.div
-          className='contact-contents'
-          variants={item1}
-          initial='hidden'
-          animate={controls}
-          ref={ref}
-          transition={{ delay: 0.4, duration: 1, type: 'tween' }}
-        >
-         <a 
-          className='link-tag' 
-          href='https://github.com/sejobasic' 
-          target="_blank" 
-          rel="noreferrer">GITHUB</a>
-         </motion.div>
-         <motion.div
-          className='contact-contents'
-          variants={item2}
-          initial='hidden'
-          animate={controls}
-          ref={ref}
-          transition={{ delay: 0.6, duration: 1, type: 'tween' }}
-        >
-         <a 
-          className='link-tag' 
-          href='https://codesandbox.io/u/sejobasic/' 
-          target="_blank" 
-          rel="noreferrer">CODE SANDBOX</a>
-         </motion.div>
-         <motion.div
-          className='contact-contents'
-          variants={item1}
-          initial='hidden'
-          animate={controls}
-          ref={ref}
-          transition={{ delay: 0.5, duration: 1, type: 'tween' }}
-        >
-         <a 
-          className='link-tag' 
-          href='https://www.instagram.com/sejoforever/?hl=en' 
-          target="_blank" 
-          rel="noreferrer">INSTAGRAM</a>
-         </motion.div>
-         <motion.div
-          className='contact-contents'
-          variants={item1}
-          initial='hidden'
-          animate={controls}
-          ref={ref}
-          transition={{ delay: 0.5, duration: 1, type: 'tween' }}
-        >
-         <a 
-          className='link-tag' 
-          href='https://medium.com/@sejobasic' 
-          target="_blank" 
-          rel="noreferrer">BLOG</a>
-         </motion.div>
-         <motion.div
-          className='contact-contents'
-          variants={item1}
-          initial='hidden'
-          animate={controls}
-          ref={ref}
-          transition={{ delay: 0.7, duration: 1, type: 'tween' }}
-        >
-         <a
-          className='link-tag'
-          onClick={downloadImage}
-          rel="noreferrer">RESUME</a>
-         </motion.div>
-         <motion.div 
-        className='shape-container'
-        drag
-        dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
-        dragElastic={0.7}
-        initial='hidden'
-        animate={controls}
-        variants={shapeVariant}
-        ref={ref}
-      >
         <img src={shape2} alt="shape" />
       </motion.div>
       </div>

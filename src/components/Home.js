@@ -17,7 +17,9 @@ function Home() {
   }
 
   const controls = useAnimation();
-  const { ref, inView } = useInView();  
+  const { ref, inView } = useInView({
+    threshold: 0.2
+  });  
 
   useEffect(() => {
     localStorage.setItem('DARK_MODE', theme);
@@ -40,7 +42,7 @@ function Home() {
       opacity: 1,
       transition: {
         delay: 0.2, 
-        duration: 2, 
+        duration: 3, 
         type: 'tween'
       }
     }
@@ -59,13 +61,13 @@ function Home() {
   }
 
   const roleVariant = {
-    hidden: { x: '100vw', opacity: 0 },
+    hidden: { x: '200vw', opacity: 0 },
     visible: {
       x: 0, 
       opacity: 1,
       transition: {
         delay: 0.2, 
-        duration: 2, 
+        duration: 3, 
         type: 'tween'
       }
     }
@@ -73,13 +75,14 @@ function Home() {
 
   
   return (
-    <div className='home'>
+    <div className='main'>
       <div className={theme}>
-        <div className='noise'>
           <div className='App'>
             <Navbar theme={theme} toggle={toggleTheme} />
+            <div className='home-container'>
             <div ref={ref} className="container">
               <motion.div 
+                id='home'
                 className="container1"
                 initial='hidden'
                 animate={controls}
@@ -123,11 +126,11 @@ function Home() {
                 </div>
               </motion.div>
             </div>
+            </div>
             <Projects />
             <Photo />
             <Contact />
           </div>
-        </div>
       </div>
     </div>
   )

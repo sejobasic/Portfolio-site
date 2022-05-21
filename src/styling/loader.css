@@ -1,0 +1,44 @@
+
+.loader-container {
+  background-color: #08372c;
+  height: 100vh;
+}
+
+.reel-item-loader {
+  font-family: 'Aesthetic';
+  font-size: 180px;
+  text-transform: uppercase;
+}
+
+.reel-item-outline-loader {
+  font-family: 'Aesthetic';
+  font-size: 180px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.9px #fbdce2;
+  color: transparent;
+}
+
+.counter-container {
+  text-align: center;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 80px;
+}
+
+.counter {
+  font-size: 80px;
+}
+
+.marquee-bottom {
+  margin-top: 100px;
+}
+
+@media (max-width: 480px) {
+  .reel-item-loader {
+    font-size: 100px;
+  }
+  
+  .reel-item-outline-loader {
+    font-size: 100px;
+  }
+}

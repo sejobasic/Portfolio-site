@@ -17,17 +17,7 @@ body {
   font-family: 'Aesthetic', neue-haas-unica, sans-serif;
 }
 
-.App {
-  margin: 0;
-  padding: 0;
-  isolation: isolate;
-}
-
-.home {
-  overflow-x:hidden
-}
-
-.noise::before {
+body::before {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,13 +30,29 @@ body {
   background: url(../assets/noise.gif);
 }
 
+.App {
+  margin: 0;
+  padding: 0;
+  isolation: isolate;
+}
+
+.home-container {
+  height: 100vh;
+  margin-top: -230px;
+  margin-bottom: 100px;
+}
+
+.main {
+  overflow-x:hidden;
+}
+
 .container {
   display: flex;
   align-items:flex-start;
   justify-content: space-between;
   height: 50vh;
   width: 100%;
-  top: -120px;
+  margin-top: 100px;
   position: relative;
   will-change: transform;
 }
@@ -80,15 +86,6 @@ body {
   padding: 50px 100px;
 }
 
-/* hr {
-  background-color: #fbdce2;
-  overflow: hidden;
-  width: 100%;
-  margin-left: 50px;
-  display: flex;
-  text-align: right;
-} */
-
 hr {
   background-color: #fbdce2;
 }
@@ -96,6 +93,7 @@ hr {
 .txt-line-title {
   overflow: hidden;
 }
+
 .txt-line-title span {
   display: block;
   height: 100%;
@@ -141,7 +139,6 @@ hr {
 .left-side-quote {
   margin-left: 120px;
   position: relative;
-  top: -120px;
 }
 
 .left-side-quote p {
@@ -193,7 +190,7 @@ hr {
     display: none;
   }
   .container {
-    height: 22vh;
+    height: 15vh;
     margin-top: 20%;
     justify-content: center;
     text-align: center;
@@ -225,17 +222,20 @@ hr {
 
 @media (max-width: 820px) {
   .container {
-    height: 20vh;
+    height: 15vh;
+    margin-top: 25%;
     overflow: visible;
     justify-content: center;
     text-align: center;
     margin-bottom: 120px;
   }
+
   .left-side-quote{
     justify-content: center;
     text-align: center;
     margin: 3%;
   }
+
   .txt-line-title span {
     font-size: 50px;
     text-align: center;
@@ -252,6 +252,7 @@ hr {
     font-size: 100px;
     text-align: center;
     justify-content: center;
+
   }
 }
 
@@ -293,7 +294,7 @@ hr {
 @media (max-width: 480px) {
   .container {
     height: 15vh;
-    margin-top: 20%;
+    margin-top: 60%;
     justify-content: center;
     text-align: center;
     padding: 0;
@@ -316,13 +317,12 @@ hr {
     justify-content: center;
     text-align: center;
   }
-  
   .line-title {
     justify-content: center;
     text-align: center;
   }
   .container2 {
-    margin-top: -10%;
+    margin-top: -200px;
   }
   .txt-line p {
     font-size: 50px;
@@ -333,8 +333,8 @@ hr {
 
 @media (max-width: 320px) {
   .container {
-    height: 25vh;
-    margin-top: 20%;
+    height: 20vh;
+    margin-top: 50%;
     justify-content: center;
     text-align: center;
     padding: 0;
@@ -363,7 +363,7 @@ hr {
     text-align: center;
   }
   .container2 {
-    margin-top: -10%;
+    margin-top: -150px;
   }
   .txt-line p {
     font-size: 50px;

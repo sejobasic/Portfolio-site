@@ -27,7 +27,7 @@ const useSize = () => {
   return [ref, dimensions]
 }
 
-function Media({ url, active, x, y, link }) {
+function Media({ url, active, x, y }) {
 const [ref, { width, height }] = useSize()
 
   return (

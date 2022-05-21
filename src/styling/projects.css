@@ -5,6 +5,7 @@
   display: fixed;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .projects-reel {
@@ -130,12 +131,12 @@ div.flag {
   position: absolute;
   width: auto;
   height: auto;
-  max-height: 50%;
   max-width: 20%;
   object-fit: contain;
   pointer-events: none;
-  left: -10%;
-  top: -10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-media img.is-active {
@@ -252,9 +253,10 @@ border: none;
   }
 }
 
-
-
 @media (max-width: 820px) {
+  .projects-main-reel {
+    margin-bottom: 350px;
+  }
   .reel-item {
     font-size: 100px;
     display: inline-block;
@@ -292,9 +294,7 @@ border: none;
     font-size: 15px;
   }
   .project-media img {
-    max-width: 40%;
-    left: -20%;
-    top: -5%;
+    max-width: 45%;
   }
 }
 
@@ -335,7 +335,7 @@ border: none;
     display: none;
   }
   .project-media img {
-
+    max-width: 45%;
   }
 }
 

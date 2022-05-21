@@ -17,7 +17,7 @@ import lesssound from '../assets/pop.wav'
 function Photo() {
 const [modal, setModal] = useState(false)
 const [tempImgSrc, setTempImgSrc] = useState('')
-const [visible, setVisible] = useState(11)
+const [visible, setVisible] = useState(6)
 
 const showMoreItems = () => {
   setVisible(prevValue => prevValue + 5)
@@ -52,9 +52,13 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
   }, [controls, inView]);
 
   const photoVariant = {
-    hidden: { opacity: 0 },
+    hidden: { 
+      opacity: 0,
+      translateY: -100
+    },
     visible: {
       opacity: 1,
+      translateY: 0,
       transition: {
         delay: 0.3, 
         duration: 0.5
@@ -94,28 +98,28 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
         variants={photoVariant}
         ref={ref}
       >
-        {designData.slice(0, visible).map((item, index) => {
+        {designData.slice(0, visible).map((item) => {
           return (
             <motion.div 
+              className='images' 
+              key={item.id}
               drag 
               dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
-              dragElastic={0.7}
-              className='images' 
-              key={index} 
+              dragElastic={0.7} 
               onClick={() => getImg(item.imgSrc)}
             >
               <img onClick={playPhoto} src={item.imgSrc} alt='photography' />
             </motion.div>
           )
         })}
-        {photoData.slice(0, visible).map((item, index) => {
+        {photoData.slice(0, visible).map((item) => {
           return (
             <motion.div
+              className='images' 
+              key={item.id}
               drag 
               dragConstraints={{ left:0, top:0, right: 0, bottom: 0}}
               dragElastic={0.7}
-              className='images' 
-              key={index} 
               onClick={() => getImg(item.imgSrc)}
             >
               <img onClick={playPhoto} src={item.imgSrc} alt='photography' />
