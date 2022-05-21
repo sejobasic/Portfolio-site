@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import useSound from 'use-sound';
 import wooshsound from '../assets/woosh1.wav'
-
 import '../styling/projects.css'
 import { Link } from 'react-router-dom'
 import simple from '../assets/simple.png'
