@@ -80,7 +80,7 @@ function Home() {
           <div className='App'>
             <Navbar theme={theme} toggle={toggleTheme} />
             <div className='home-container'>
-            <div ref={ref} className="container">
+              <div ref={ref} className="container">
               <motion.div 
                 id='home'
                 className="container1"
