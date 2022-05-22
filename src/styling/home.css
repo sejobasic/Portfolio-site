@@ -11,6 +11,7 @@ body {
   isolation: isolate;
   margin: 0;
   color: #fbdce2;
+  background-color: #08372c;
   height: 100%;
   cursor: none;
   -webkit-font-smoothing: antialiased;
@@ -328,6 +329,12 @@ hr {
     font-size: 50px;
     text-align: center;
     justify-content: center;
+  }
+  .main-cursor {
+    display: none;
+  }
+  .secondary-cursor {
+    display: none;
   }
 }
 

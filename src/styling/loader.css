@@ -41,4 +41,30 @@
   .reel-item-outline-loader {
     font-size: 100px;
   }
+
+  .marquee-bottom {
+    margin-top: 250px;
+  }
+
+  .counter-container {
+    margin-top: 250px;
+  }
+}
+
+@media (max-width: 375px) {
+  .reel-item-loader {
+    font-size: 100px;
+  }
+  
+  .reel-item-outline-loader {
+    font-size: 100px;
+  }
+
+  .marquee-bottom {
+    margin-top: 100px;
+  }
+
+  .counter-container {
+    margin-top: 150px;
+  }
 }
