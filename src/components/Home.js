@@ -82,7 +82,6 @@ function Home() {
             <div className='home-container'>
               <div ref={ref} className="container">
               <motion.div 
-                id='home'
                 className="container1"
                 initial='hidden'
                 animate={controls}

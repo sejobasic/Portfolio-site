@@ -295,7 +295,7 @@ hr {
 @media (max-width: 480px) {
   .container {
     height: 15vh;
-    margin-top: 60%;
+    margin-top: 50%;
     justify-content: center;
     text-align: center;
     padding: 0;

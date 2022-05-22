@@ -21,7 +21,7 @@ function App() {
   }, [])
 
   return (
-    <div className={theme}>
+    <div id='home' className={theme}>
       <AnimatePresence>
         <Cursor />
         {loading ? (
