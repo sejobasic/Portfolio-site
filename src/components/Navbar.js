@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 import '../styling/navbar.css'
 import sejo from '../assets/sejo7.png'
 
-function Navbar({toggle, theme}) {
+function Navbar({ toggle, theme }) {
   const [play] = useSound(switchsound, { volume: 0.25 });
 
   return (

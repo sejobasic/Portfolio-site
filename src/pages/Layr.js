@@ -9,7 +9,7 @@ import '../styling/home.css';
 import '../styling/navbar.css';
 
 
-function Layr() {
+function Layr({ theme }) {
   const [playWoosh] = useSound(wooshsound, { volume: 0.1 });
 
   return (

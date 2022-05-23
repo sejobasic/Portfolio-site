@@ -8,22 +8,22 @@ import Navbar from './Navbar'
 import '../styling/home.css';
 import '../styling/navbar.css';
 
-function Home() {
-  const storedDarkMode = localStorage.getItem("DARK_MODE");
-  const [theme, setTheme] = useState(storedDarkMode)
+function Home({ theme, toggle }) {
+  // const storedDarkMode = localStorage.getItem("DARK_MODE");
+  // const [theme, setTheme] = useState(storedDarkMode)
 
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  }
+  // const toggleTheme = () => {
+  //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
+  // }
 
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.2
   });  
 
-  useEffect(() => {
-    localStorage.setItem('DARK_MODE', theme);
-  }, [theme]);
+  // useEffect(() => {
+  //   localStorage.setItem('DARK_MODE', theme);
+  // }, [theme]);
 
 
   useEffect(() => {
@@ -78,7 +78,7 @@ function Home() {
     <div className='main'>
       <div className={theme}>
           <div className='App'>
-            <Navbar theme={theme} toggle={toggleTheme} />
+            <Navbar theme={theme} toggle={toggle} />
             <div className='home-container'>
               <div ref={ref} className="container">
               <motion.div 

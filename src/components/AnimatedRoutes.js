@@ -7,17 +7,17 @@ import Trails from '../pages/Trails'
 import Home from '../components/Home'
 
 
-function AnimatedRoutes() {
+function AnimatedRoutes({ theme, toggle }) {
 
   const location = useLocation()
 
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/layr" element={<Layr />} />
-        <Route path="/simple" element={<Simple />} />
-        <Route path="/Trails" element={<Trails />} />
+        <Route path="/" element={<Home theme={theme} toggle={toggle} />} />
+        <Route path="/layr" element={<Layr theme={theme} />} />
+        <Route path="/simple" element={<Simple theme={theme} />} />
+        <Route path="/Trails" element={<Trails theme={theme} />} />
       </Routes>
     </AnimatePresence>
   )
