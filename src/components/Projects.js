@@ -97,12 +97,13 @@ function Projects() {
             variants={projectVariant}
             ref={ref}
           >
-            {projectData.map(({title, link}) => (
+            {projectData.map(({title, id, link}, index) => (
               <Title 
+                id={id}
                 link={link}
                 title={title} 
                 setActiveIndex={setActiveIndex}
-                key={title.id}
+                index={index}
               />
             ))}
           </motion.div>
@@ -112,7 +113,7 @@ function Projects() {
             const xPos = isActive ? x : 0
             const yPos = isActive ? y : 0
 
-            return <Media key={index.id}  url={mediaUrl} active={isActive} x={xPos} y={yPos} />
+            return <Media url={mediaUrl} active={isActive} x={xPos} y={yPos} />
           })}
         </div>
       </div>
