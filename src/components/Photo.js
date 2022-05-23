@@ -16,7 +16,7 @@ import lesssound from '../assets/pop.wav'
 function Photo() {
   const [modal, setModal] = useState(false)
   const [tempImgSrc, setTempImgSrc] = useState('')
-  const [visible, setVisible] = useState(6)
+  const [visible, setVisible] = useState(7)
 
   const showMoreItems = () => {
     setVisible(prevValue => prevValue + 5)
