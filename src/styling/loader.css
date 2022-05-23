@@ -1,6 +1,5 @@
 
 .loader-container {
-  background-color: #08372c;
   height: 100vh;
 }
 
@@ -36,16 +35,13 @@
 @media (max-width: 480px) {
   .reel-item-loader {
     font-size: 100px;
-  }
-  
+  } 
   .reel-item-outline-loader {
     font-size: 100px;
   }
-
   .marquee-bottom {
     margin-top: 150px;
   }
-
   .counter-container {
     margin-top: 150px;
   }
@@ -55,15 +51,12 @@
   .reel-item-loader {
     font-size: 100px;
   }
-  
   .reel-item-outline-loader {
     font-size: 100px;
   }
-
   .marquee-bottom {
     margin-top: 100px;
   }
-
   .counter-container {
     margin-top: 150px;
   }

@@ -9,8 +9,8 @@ import '../styling/home.css';
 import '../styling/navbar.css';
 
 
-function Layr({ theme }) {
-  const [playWoosh] = useSound(wooshsound, { volume: 0.1 });
+function Layr() {
+  const [playWoosh] = useSound(wooshsound, { volume: 0.3 });
 
   return (
     <div className='noise'>
@@ -34,15 +34,25 @@ function Layr({ theme }) {
       <div className='project-text-container'>
         <p className='project-header'>Layr Sequencer</p>
         <p className='project-text'>
-            Layr Sequencer is built with a React Front-end and Rails Back-end for Authentication. <br />
-            Coming from a musical background i really wanted to do something a bit different<br />
-            that was interactive and work with audio. The Layr Sequencer features a 16-Step Sequencer page<br /> 
-            and a Jam page with a Piano and Drum Pad. This project very quickly became a passion project<br /> 
-            and is something that i will continue working on and adding new features in the future.
+          Layr Sequencer is built with a React Front-end and Rails Back-end for Authentication. <br />
+          Coming from a musical background i really wanted to do something a bit different<br />
+          that was interactive and work with audio. The Layr Sequencer features a 16-Step Sequencer page<br /> 
+          and a Jam page with a Piano and Drum Pad. This project very quickly became a passion project<br /> 
+          and is something that i will continue working on and adding new features in the future.
         </p>
         <div className='link-container'>
-          <a className='link-tag' href='https://github.com/sejobasic/Layr-Sequencer' target="_blank" rel="noreferrer">GITHUB</a>|
-          <a className='link-tag' href='http://www.layrsequencer.com/' target="_blank" rel="noreferrer">LIVE</a>
+          <a 
+            className='link-tag' 
+            href='https://github.com/sejobasic/Layr-Sequencer' 
+            target="_blank" 
+            rel="noreferrer">GITHUB
+          </a>|
+          <a 
+            className='link-tag' 
+            href='http://www.layrsequencer.com/' 
+            target="_blank" 
+            rel="noreferrer">LIVE
+          </a>
         </div>
       </div>
       </motion.div>

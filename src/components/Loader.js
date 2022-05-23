@@ -1,10 +1,10 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
 import CountUp from 'react-countup';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import '../styling/loader.css'
 
-function Loader({ setLoading }) {
+function Loader({ setLoading, theme }) {
 
   const marqueeTop = {
     hidden: {
@@ -73,60 +73,61 @@ function Loader({ setLoading }) {
   }
 
   return (
-    <div className='loader-container'>
-      <Marquee
-        className='marquee'
-        speed={100}
-        gradientColor={[8, 55, 44]}
-        direction='right'
-      >
+    <div className={theme}>
+      <div className='loader-container'>
+        <Marquee
+          className='marquee'
+          speed={100}
+          gradient={false}
+          direction='right'
+        >
+          <motion.div 
+            className='marquee-top'
+            variants={marqueeTop}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+          >
+            <span className='reel-item-loader'>&nbsp;WELCOME</span>
+            <span className='reel-item-loader'>&nbsp;WELCOME</span>
+            <span className='reel-item-loader'>&nbsp;WELCOME</span>
+          </motion.div>
+        </Marquee>
         <motion.div 
-          className='marquee-top'
-          variants={marqueeTop}
+          className='counter-container'
+          variants={counter}
           initial='hidden'
           animate='visible'
           exit='exit'
+          onAnimationComplete={() => setLoading(false)}
         >
-          <span className='reel-item-loader'>&nbsp;WELCOME</span>
-          <span className='reel-item-loader'>&nbsp;WELCOME</span>
-          <span className='reel-item-loader'>&nbsp;WELCOME</span>
+          <CountUp
+            className='counter'
+            end={100}
+            duration={3}
+          />%
         </motion.div>
-      </Marquee>
-      <motion.div 
-        className='counter-container'
-        variants={counter}
-        initial='hidden'
-        animate='visible'
-        exit='exit'
-        onAnimationComplete={() => setLoading(false)}
-      >
-        <CountUp
-          className='counter'
-          end={100}
-          duration={3}
-        />%
-      </motion.div>
-      <Marquee
-        className='marquee'
-        speed={100}
-        gradientColor={[8, 55, 44]}
-      >
-      <motion.div 
-        className='marquee-top'
-        variants={marqueeBottom}
-        initial='hidden'
-        animate='visible'
-        exit='exit'
-      >
-        <div className='marquee-bottom'>
-          <span className='reel-item-outline-loader'>&nbsp;WELCOME</span>
-          <span className='reel-item-outline-loader'>&nbsp;WELCOME</span>
-          <span className='reel-item-outline-loader'>&nbsp;WELCOME</span>
-        </div>
-      </motion.div>
-      </Marquee>
+        <Marquee
+          className='marquee'
+          speed={100}
+          gradient={false}
+        >
+          <motion.div 
+            className='marquee-top'
+            variants={marqueeBottom}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+          >
+            <div className='marquee-bottom'>
+              <span className='reel-item-outline-loader'>&nbsp;WELCOME</span>
+              <span className='reel-item-outline-loader'>&nbsp;WELCOME</span>
+              <span className='reel-item-outline-loader'>&nbsp;WELCOME</span>
+            </div>
+          </motion.div>
+        </Marquee>
+      </div>
     </div>
-    
   )
 }
 

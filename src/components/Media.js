@@ -2,7 +2,6 @@ import React, {useState, useCallback, useLayoutEffect} from 'react'
 
 const getDimensionObject = node => {
   const rect = node.getBoundingClientRect()
-
   return {
     width: rect.width,
     height: rect.height,

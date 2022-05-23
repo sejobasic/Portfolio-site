@@ -229,13 +229,11 @@ hr {
     text-align: center;
     margin-bottom: 120px;
   }
-
   .left-side-quote{
     justify-content: center;
     text-align: center;
     margin: 3%;
   }
-
   .txt-line-title span {
     font-size: 50px;
     text-align: center;
@@ -281,13 +279,13 @@ hr {
   }
   .container2{
     padding: 0px 35px;
-}
-.container {
-  height: 20vh;
-}
-.reel-item{
-      font-size: 60px;
-      margin-top: 50px;
+  }
+  .container {
+    height: 20vh;
+  }
+  .reel-item {
+    font-size: 60px;
+    margin-top: 50px;
   }
 }
 
@@ -304,7 +302,7 @@ hr {
     justify-content: center;
     margin-right: 10px;
   }
-  .left-side-quote{
+  .left-side-quote {
     justify-content: center;
     text-align: center;
   }
@@ -350,7 +348,7 @@ hr {
     justify-content: center;
     margin-right: 10px;
   }
-  .left-side-quote{
+  .left-side-quote {
     justify-content: center;
     text-align: center;
   }

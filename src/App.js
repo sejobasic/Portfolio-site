@@ -47,7 +47,7 @@ function App() {
             key='loader'
             
           >
-            <Loader setLoading={setLoading} />
+            <Loader theme={theme} setLoading={setLoading} />
           </motion.div>
         ) : (
         <Router>

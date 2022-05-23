@@ -8,7 +8,7 @@ import '../styling/navbar.css'
 import sejo from '../assets/sejo7.png'
 
 function Navbar({ toggle, theme }) {
-  const [play] = useSound(switchsound, { volume: 0.25 });
+  const [play] = useSound(switchsound, { volume: 0.35 });
 
   return (
       <motion.div 
@@ -28,34 +28,70 @@ function Navbar({ toggle, theme }) {
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 2.5 }}
         >
-          <Link to='home' spy={true} smooth={true} offset={40} duration={1000} className='logo-item' >
+          <Link 
+            to='home' 
+            spy={true} 
+            smooth={true} 
+            offset={40} 
+            duration={1000} 
+            className='logo-item' 
+          >
             <div>
-              <img  className='logo' src={sejo} alt="sejo logo" />
+              <img className='logo' src={sejo} alt="sejo logo" />
             </div>
           </Link>
         </motion.div>
-        <Link to='home' spy={true} smooth={true} offset={40} duration={1000} className='nav-item'>
+        <Link 
+          to='home' 
+          spy={true} 
+          smooth={true} 
+          offset={40} 
+          duration={1000} 
+          className='nav-item'
+        >
           <div>
             <span className='nav-item-text'>HOME</span>
           </div>
         </Link>
-        <Link to='projects' spy={true} smooth={true} offset={40} duration={1000} className='nav-item'>
+        <Link 
+          to='projects' 
+          spy={true} 
+          smooth={true} 
+          offset={40} 
+          duration={1000} 
+          className='nav-item'
+        >
           <div>
             <span className='nav-item-text'>PROJECTS</span>
           </div>
         </Link>
-        <Link to='photos' spy={true} smooth={true} offset={50} duration={1000} className='nav-item'>
+        <Link 
+          to='photos' 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={1000} 
+          className='nav-item'
+        >
           <div>
             <span className='nav-item-text'>P+D</span>
           </div>
         </Link>
-        <Link to='contact' spy={true} smooth={true} offset={50} duration={1000} className='nav-item'>
-          <div >
+        <Link 
+          to='contact' 
+          spy={true} 
+          smooth={true} 
+          offset={50} 
+          duration={1000} 
+          className='nav-item'
+        >
+          <div>
             <span className='nav-item-text'>CONTACT</span>
           </div>
         </Link>
         <div className='sound-div' onClick={play}>
-          <span className='nav-item-text'>{theme === 'light' ? 'TURN OFF THE LIGHTS' : 'TURN ON THE LIGHTS'}
+          <span className='nav-item-text'>
+            {theme === 'light' ? 'TURN OFF THE LIGHTS' : 'TURN ON THE LIGHTS'}
           </span>
           <ReactSwitch 
             onChange={toggle}

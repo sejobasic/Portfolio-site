@@ -4,10 +4,8 @@ import { motion } from 'framer-motion'
 import useSound from 'use-sound';
 import suctionsound from '../assets/suction.mp3'
 
-
-
 function Title({ title, setActiveIndex, index, link }) {
-  const [playSuction] = useSound(suctionsound, { volume: 0.1 });
+  const [playSuction] = useSound(suctionsound, { volume: 0.3 });
 
   return (
       <Link to={link}>
@@ -15,7 +13,8 @@ function Title({ title, setActiveIndex, index, link }) {
         <div 
           className='project-title'
           onMouseEnter={() => setActiveIndex(index)}
-          onMouseLeave={() => setActiveIndex(-1)}>
+          onMouseLeave={() => setActiveIndex(-1)}
+        >
           <div onClick={playSuction} className='project-line'>{title}</div>
         </div>
       </div>

@@ -9,22 +9,10 @@ import '../styling/home.css';
 import '../styling/navbar.css';
 
 function Home({ theme, toggle }) {
-  // const storedDarkMode = localStorage.getItem("DARK_MODE");
-  // const [theme, setTheme] = useState(storedDarkMode)
-
-  // const toggleTheme = () => {
-  //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  // }
-
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.2
   });  
-
-  // useEffect(() => {
-  //   localStorage.setItem('DARK_MODE', theme);
-  // }, [theme]);
-
 
   useEffect(() => {
     if (inView) {
@@ -73,7 +61,6 @@ function Home({ theme, toggle }) {
     }
   }
 
-  
   return (
     <div className='main'>
       <div className={theme}>
@@ -81,16 +68,16 @@ function Home({ theme, toggle }) {
             <Navbar theme={theme} toggle={toggle} />
             <div className='home-container'>
               <div ref={ref} className="container">
-              <motion.div 
-                className="container1"
-                initial='hidden'
-                animate={controls}
-                variants={titleVariant}
-              >
-                <div className="txt-line" id="sejo">
-                  <p>Sejo Basic</p>
-                </div>
-              </motion.div>
+                <motion.div 
+                  className="container1"
+                  initial='hidden'
+                  animate={controls}
+                  variants={titleVariant}
+                >
+                  <div className="txt-line" id="sejo">
+                    <p>Sejo Basic</p>
+                  </div>
+                </motion.div>
               <div></div>
             </div>
             <motion.div 

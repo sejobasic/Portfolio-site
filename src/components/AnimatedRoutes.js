@@ -6,9 +6,7 @@ import Simple from '../pages/Simple'
 import Trails from '../pages/Trails'
 import Home from '../components/Home'
 
-
 function AnimatedRoutes({ theme, toggle }) {
-
   const location = useLocation()
 
   return (

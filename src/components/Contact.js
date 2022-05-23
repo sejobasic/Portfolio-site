@@ -86,7 +86,7 @@ function Contact() {
 
   return (
     <div className='contact-main-reel' id='contact'>
-       <Marquee
+      <Marquee
         speed={100}
         gradient={false}
       >

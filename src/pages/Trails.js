@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import trails from '../assets/trails.png'
 
 function Trails() {
-  const [playWoosh] = useSound(wooshsound, { volume: 0.1 });
+  const [playWoosh] = useSound(wooshsound, { volume: 0.3 });
 
   return (
     <div className='noise'>
@@ -39,7 +39,12 @@ function Trails() {
         also leave a review comment on a specific trail. <br />
       </p>
       <div className='link-container'>
-        <a className='link-tag' href='https://github.com/sejobasic/Trails-app' target="_blank" rel="noreferrer">GITHUB</a>
+        <a 
+          className='link-tag' 
+          href='https://github.com/sejobasic/Trails-app' 
+          target="_blank" 
+          rel="noreferrer">GITHUB
+        </a>
       </div>
     </div>
     </motion.div>

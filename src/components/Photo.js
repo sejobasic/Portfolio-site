@@ -15,24 +15,24 @@ import lesssound from '../assets/pop.wav'
 
 
 function Photo() {
-const [modal, setModal] = useState(false)
-const [tempImgSrc, setTempImgSrc] = useState('')
-const [visible, setVisible] = useState(6)
+  const [modal, setModal] = useState(false)
+  const [tempImgSrc, setTempImgSrc] = useState('')
+  const [visible, setVisible] = useState(6)
 
-const showMoreItems = () => {
-  setVisible(prevValue => prevValue + 5)
-  playLoad()
-}
+  const showMoreItems = () => {
+    setVisible(prevValue => prevValue + 5)
+    playLoad()
+  }
 
-const showLessItems = () => {
-  setVisible(prevValue => prevValue - 5)
-  playLess()
-}
+  const showLessItems = () => {
+    setVisible(prevValue => prevValue - 5)
+    playLess()
+  }
 
-const [playPhoto] = useSound(photosound, { volume: 0.1 });
-const [playModal] = useSound(modalsound, { volume: 0.1 });
-const [playLoad] = useSound(loadsound, { volume: 0.1 });
-const [playLess] = useSound(lesssound, { volume: 0.1 });
+  const [playPhoto] = useSound(photosound, { volume: 0.2 });
+  const [playModal] = useSound(modalsound, { volume: 0.2 });
+  const [playLoad] = useSound(loadsound, { volume: 0.2 });
+  const [playLess] = useSound(lesssound, { volume: 0.2 });
 
   const getImg = (imgSrc) => {
     setTempImgSrc(imgSrc)
@@ -81,13 +81,32 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
         </div>
       </Marquee>
       <div  className={modal ? 'modal open' : 'modal'}>
-        <Tilt glareEnable={true} glareColor='#fbdce2' glarePosition='all' glareMaxOpacity={0.5} perspective={800} gyroscope={true} tiltMaxAngleX={35} tiltMaxAngleY={35}>
+        <Tilt 
+          glareEnable={true} 
+          glareColor='#fbdce2' 
+          glarePosition='all' 
+          glareMaxOpacity={0.5} 
+          perspective={800} 
+          gyroscope={true} 
+          tiltMaxAngleX={35} 
+          tiltMaxAngleY={35}
+        >
           <div onClick={playModal} >
-            <img  className='modal-img' src={tempImgSrc} alt='images modal' onClick={() => setModal(false)}  />
+            <img 
+              className='modal-img' 
+              src={tempImgSrc} 
+              alt='images modal' 
+              onClick={() => setModal(false)}  
+            />
           </div>
         </Tilt>
         <div onClick={playModal} >
-          <img className='close' src={close} alt='close button' onClick={() => setModal(false)} />
+          <img 
+            className='close' 
+            src={close} 
+            alt='close button' 
+            onClick={() => setModal(false)} 
+          />
         </div>
         <p>PHOTOGRAPHY AND DESIGN WORK BY SEJO BASIC</p>
       </div>
@@ -133,7 +152,7 @@ const [playLess] = useSound(lesssound, { volume: 0.1 });
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1}}
       >
-        <button  className='link-tag' onClick={showMoreItems}>LOAD MORE</button>
+        <button className='link-tag' onClick={showMoreItems}>LOAD MORE</button>
         <button className='link-tag' onClick={showLessItems}>LOAD LESS</button>
       </motion.div>
     </div>

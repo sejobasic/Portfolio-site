@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import simple from '../assets/simple.png'
 
 function Simple() {
-  const [playWoosh] = useSound(wooshsound, { volume: 0.1 });
+  const [playWoosh] = useSound(wooshsound, { volume: 0.3 });
 
   return (
     <div className='noise'>
@@ -38,7 +38,12 @@ function Simple() {
           The user has the ability to add new items and remove current items from their fridge. <br /> 
         </p>
         <div className='link-container'>
-          <a className='link-tag' href='https://github.com/weiwei-out/MagicFridge' target="_blank" rel="noreferrer">GITHUB</a>
+          <a 
+            className='link-tag' 
+            href='https://github.com/weiwei-out/MagicFridge' 
+            target="_blank" 
+            rel="noreferrer">GITHUB
+          </a>
         </div>
       </div>
       </motion.div>

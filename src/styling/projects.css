@@ -19,7 +19,6 @@
   animation: animation-reel 60s infinite linear;
 }
 
-
 /* @keyframes animation-reel {
   from {
     transform: translateX(0%)
@@ -193,7 +192,6 @@ div.flag {
   max-width: 50%;
 }
 
-
 .link-tag {
   font-size: 15px;
   font-family: neue-haas-unica, sans-serif;
@@ -295,6 +293,12 @@ border: none;
   }
   .project-media img {
     max-width: 45%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-media img {
+    max-width: 35%;
   }
 }
 
