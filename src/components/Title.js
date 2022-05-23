@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import useSound from 'use-sound';
 import suctionsound from '../assets/suction.mp3'
 

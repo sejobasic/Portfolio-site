@@ -91,10 +91,10 @@ function Contact() {
         gradient={false}
       >
         <div className='contact-reel'>
-          <span className='reel-item'>&nbsp;WORK</span>
+          <span className='reel-item'>&nbsp;CONNECT</span>
           <span className='reel-item-outline'>&nbsp;WITH</span>
           <span className='reel-item'>&nbsp;ME</span>
-          <span className='reel-item-outline'>&nbsp;WORK</span>
+          <span className='reel-item-outline'>&nbsp;CONNECT</span>
           <span className='reel-item'>&nbsp;WITH</span>
           <span className='reel-item-outline'>&nbsp;ME</span>
         </div>
@@ -150,6 +150,24 @@ function Contact() {
               href='https://www.instagram.com/sejoforever/?hl=en' 
               target="_blank" 
               rel="noreferrer">INSTAGRAM
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item3} 
+              href='https://soundcloud.com/sejoforever' 
+              target="_blank" 
+              rel="noreferrer">SOUNDCLOUD
+            </motion.a>
+          </div>
+          <div className='contact-contents'>
+            <motion.a 
+              className='link-tag'
+              variants={item3} 
+              href='https://open.spotify.com/artist/0KPmCqiU6iscwxQo62WBXN?si=Uu9zCLLPQrKDIRFBe8fn0Q' 
+              target="_blank" 
+              rel="noreferrer">SPOTIFY
             </motion.a>
           </div>
           <div className='contact-contents'>

@@ -13,7 +13,6 @@ import modalsound from '../assets/fairy.wav'
 import loadsound from '../assets/pop2.wav'
 import lesssound from '../assets/pop.wav'
 
-
 function Photo() {
   const [modal, setModal] = useState(false)
   const [tempImgSrc, setTempImgSrc] = useState('')

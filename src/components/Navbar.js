@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import ReactSwitch from 'react-switch'
 import useSound from 'use-sound';

@@ -51,6 +51,17 @@ div.flag {
   /* border: solid 1px #fbdce2; */
 }
 
+.images img {
+  transition: 1s ease;
+}
+
+.images img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
 .images:hover img {
   filter: opacity(.8);
 }
