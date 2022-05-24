@@ -85,8 +85,7 @@ function Photo() {
           glareColor='#fbdce2' 
           glarePosition='all' 
           glareMaxOpacity={0.5} 
-          perspective={800} 
-          gyroscope={true} 
+          perspective={800}
           tiltMaxAngleX={35} 
           tiltMaxAngleY={35}
         >
