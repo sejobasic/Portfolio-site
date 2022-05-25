@@ -88,6 +88,7 @@ div.flag {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+  overflow: hidden;
 }
 
 .modal .modal-img {
@@ -101,6 +102,7 @@ div.flag {
   padding: 100px 0 100px;
   margin: 0 auto;
   transition: transform .5s;
+  cursor: pointer;
 }
 
 .modal .close {
@@ -119,6 +121,7 @@ div.flag {
   height: 2rem;
   padding: 5px;
   transition: transform .2s;
+  cursor: pointer;
 }
 
 .modal.open p {
