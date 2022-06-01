@@ -36,7 +36,7 @@ function Trails() {
         As Avid Hikers ourselves we wanted to create an application that would make<br />
         finding new hiking spots and trails easier and connect with other hikers. <br />
         The user has the ability to see trails, add trails to their favorites list and<br />
-        also leave a review comment on a specific trail. <br />
+        also leave a review comment on a specific trail. It has full CRUD functions <br />
       </p>
       <div className='link-container'>
         <a 
