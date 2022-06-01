@@ -35,7 +35,7 @@ function Simple() {
           It was created during a 1-week Group Project sprint at Flatiron School. <br />
           Simple Fridge is an easy to use application that keeps track of the grocery<br />
           items in your fridge and shows how many days left until the items expire. <br />
-          The user has the ability to add new items and remove current items from their fridge. <br /> 
+          The user has the ability to add new items, sort through current items and remove items from their fridge. <br /> 
         </p>
         <div className='link-container'>
           <a 
