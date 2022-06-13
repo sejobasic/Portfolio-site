@@ -33,3 +33,24 @@
 .contact-links {
   margin-top: 70px;
 }
+
+.footer-text {
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 10px;
+  word-spacing: 70px;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: relative;
+  filter: blur(3px);
+  transition: filter 0.3s ease-in-out;
+}
+
+.footer-container:hover {
+  filter: blur(0.2px);
+}

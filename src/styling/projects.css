@@ -190,6 +190,8 @@ div.flag {
 
 .project-image {
   max-width: 50%;
+  border: solid 1px #fbdce2;
+  border-radius: 20px;
 }
 
 .link-tag {

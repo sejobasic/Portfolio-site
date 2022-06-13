@@ -200,6 +200,15 @@ function Contact() {
         >
         <img src={shape2} alt="shape" />
       </motion.div>
+      <motion.div
+       className='footer-container'
+       initial='hidden'
+       animate={controls}
+       variants={shapeVariant}
+       ref={ref}
+      >
+          <p className='footer-text'>BUILT BY SEJO BASIC 2022</p>
+        </motion.div>
       </div>
     </div>
   )
