@@ -23,15 +23,6 @@ a {
   animation: animation-reel 60s infinite linear;
 }
 
-/* @keyframes animation-reel {
-  from {
-    transform: translateX(0%)
-  }
-  to {
-    transform: translateX(-50%);
-  }
-} */
-
 .reel-item {
   font-family: 'Aesthetic';
   font-size: 180px;
@@ -64,8 +55,8 @@ div.flag {
 }
 
 .shape-container img {
-  animation-name: rotate; 
-  animation-duration: 2s; 
+  animation-name: rotate;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   max-width: 120px;
@@ -74,8 +65,12 @@ div.flag {
 }
 
 @keyframes rotate {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .project-wrapper {
@@ -89,7 +84,7 @@ div.flag {
   justify-content: center;
 }
 
-.project-title  {
+.project-title {
   transition: opacity 0.35s cubic-bezier(0.77, 0, 0.175, 1);
   font-family: 'Aesthetic';
   font-size: 105px;
@@ -108,10 +103,10 @@ div.flag {
 }
 
 .project-list {
-    z-index: 1;
-    text-align: center;
-    mix-blend-mode: difference;
-    justify-content: center;
+  z-index: 1;
+  text-align: center;
+  mix-blend-mode: difference;
+  justify-content: center;
 }
 
 .project-item {
@@ -212,8 +207,8 @@ div.flag {
   position: relative;
   padding: 7px;
   background-color: Transparent;
-  background-repeat:no-repeat;
-border: none;
+  background-repeat: no-repeat;
+  border: none;
 }
 
 .link-tag.next {
@@ -348,8 +343,3 @@ border: none;
     max-width: 45%;
   }
 }
-
-
-
-
-

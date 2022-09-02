@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Aesthetic';
   src: url('../assets/Aesthetic-Regular.woff2') format('woff2'),
-      url('../assets/Aesthetic-Regular.woff') format('woff');
+    url('../assets/Aesthetic-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@ body::before {
   width: 100vw;
   height: 100vh;
   content: '';
-  opacity: .02;
+  opacity: 0.02;
   z-index: 1500;
   pointer-events: none;
   background: url(../assets/noise.gif);
@@ -43,12 +43,12 @@ body::before {
 }
 
 .main {
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: space-between;
   height: 50vh;
   width: 100%;
@@ -185,7 +185,7 @@ hr {
   mix-blend-mode: difference;
 }
 
- @media (max-width: 1200px) {
+@media (max-width: 1200px) {
   br {
     display: none;
   }
@@ -196,7 +196,7 @@ hr {
     text-align: center;
     margin-bottom: 100px;
   }
-  .left-side-quote{
+  .left-side-quote {
     justify-content: center;
     text-align: center;
     margin: 3%;
@@ -229,7 +229,7 @@ hr {
     text-align: center;
     margin-bottom: 120px;
   }
-  .left-side-quote{
+  .left-side-quote {
     justify-content: center;
     text-align: center;
     margin: 3%;
@@ -250,13 +250,12 @@ hr {
     font-size: 100px;
     text-align: center;
     justify-content: center;
-
   }
 }
 
 @media (max-width: 663px) {
-  .txt-line p{
-      font-size: 60px;
+  .txt-line p {
+    font-size: 60px;
   }
   .container {
     margin-bottom: 100px;
@@ -267,17 +266,17 @@ hr {
   .wrapper {
     height: 170px;
   }
-  .left-side-quote{
-      margin-left: 3vw;
-      padding: 0px 35px;
+  .left-side-quote {
+    margin-left: 3vw;
+    padding: 0px 35px;
   }
-  .left-side-quote p{
-      font-size: 12px;
+  .left-side-quote p {
+    font-size: 12px;
   }
-  .container1{
-      padding: 80px 50px;
+  .container1 {
+    padding: 80px 50px;
   }
-  .container2{
+  .container2 {
     padding: 0px 35px;
   }
   .container {
@@ -361,7 +360,7 @@ hr {
     justify-content: center;
     text-align: center;
   }
-  
+
   .line-title {
     justify-content: center;
     text-align: center;
@@ -375,12 +374,3 @@ hr {
     justify-content: center;
   }
 }
-
-
-
-
-
-
-
-
-

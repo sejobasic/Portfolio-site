@@ -5,7 +5,7 @@
   width: 100%;
   justify-content: flex-start;
   display: flex;
-  z-index: 9999; 
+  z-index: 9999;
   mix-blend-mode: difference;
 }
 
@@ -138,7 +138,7 @@
   }
   .navbar span {
     color: #fbdce2;
-    padding:  15px;
+    padding: 15px;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -166,7 +166,7 @@
   .navbar span {
     /* display: block; */
     color: #fbdce2;
-    padding:  15px;
+    padding: 15px;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -191,7 +191,7 @@
   .navbar span {
     /* display: block; */
     color: #fbdce2;
-    padding:  10px;
+    padding: 10px;
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -205,5 +205,3 @@
     display: none;
   }
 }
-
-
