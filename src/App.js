@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import './styling/home.css';
 import './styling/navbar.css';
 import Cursor from './components/Cursor'
-import AnimatedRoutes from './components/AnimatedRoutes';
+import Home from './components/Home';
 import Loader from './components/Loader'
 
 
@@ -13,6 +12,7 @@ function App() {
   
   const storedDarkMode = localStorage.getItem("DARK_MODE");
   const [theme, setTheme] = useState(storedDarkMode)
+  
 
   const toggleTheme = () => {
     setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
@@ -22,8 +22,8 @@ function App() {
     const existingPreference = localStorage.getItem('DARK_MODE', theme);
     if (existingPreference) {
      ( existingPreference === "dark")
-        ? setTheme("light")
-        : setTheme("dark");
+        ? setTheme("dark")
+        : setTheme("light");
     } else {
       setTheme("light");
       localStorage.setItem("DARK_MODE", "dark");
@@ -50,9 +50,7 @@ function App() {
             <Loader theme={theme} setLoading={setLoading} />
           </motion.div>
         ) : (
-        <Router>
-          <AnimatedRoutes theme={theme} toggle={toggleTheme} />
-        </Router>
+          <Home theme={theme} toggle={toggleTheme} />
         )}
       </AnimatePresence>
     </div>

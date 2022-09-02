@@ -1,6 +1,11 @@
 
 .loader-container {
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 200px;
 }
 
 .reel-item-loader {
@@ -20,16 +25,7 @@
 .counter-container {
   text-align: center;
   justify-content: center;
-  margin-top: 150px;
   font-size: 80px;
-}
-
-.counter {
-  font-size: 80px;
-}
-
-.marquee-bottom {
-  margin-top: 100px;
 }
 
 @media (max-width: 480px) {
@@ -39,12 +35,6 @@
   .reel-item-outline-loader {
     font-size: 100px;
   }
-  .marquee-bottom {
-    margin-top: 150px;
-  }
-  .counter-container {
-    margin-top: 150px;
-  }
 }
 
 @media (max-width: 375px) {
@@ -53,11 +43,5 @@
   }
   .reel-item-outline-loader {
     font-size: 100px;
-  }
-  .marquee-bottom {
-    margin-top: 100px;
-  }
-  .counter-container {
-    margin-top: 150px;
   }
 }

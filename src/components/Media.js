@@ -1,6 +1,6 @@
-import React, {useState, useCallback, useLayoutEffect} from 'react'
+import React, { useState, useCallback, useLayoutEffect } from 'react'
 
-const getDimensionObject = node => {
+const getDimensionObject = (node) => {
   const rect = node.getBoundingClientRect()
   return {
     width: rect.width,
@@ -12,7 +12,7 @@ const useSize = () => {
   const [dimensions, setDimensions] = useState({})
   const [node, setNode] = useState(null)
 
-  const ref = useCallback(node => {
+  const ref = useCallback((node) => {
     setNode(node)
   }, [])
 
@@ -27,7 +27,7 @@ const useSize = () => {
 }
 
 function Media({ url, active, x, y }) {
-const [ref, { width, height }] = useSize()
+  const [ref, { width, height }] = useSize()
 
   return (
     <img

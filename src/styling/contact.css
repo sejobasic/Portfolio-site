@@ -46,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items:center;
+  padding-top: 100px;
   position: relative;
   filter: blur(3px);
   transition: filter 0.3s ease-in-out;

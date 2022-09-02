@@ -1,23 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import useSound from 'use-sound';
+import useSound from 'use-sound'
 import suctionsound from '../assets/suction.mp3'
 
 function Title({ title, setActiveIndex, index, link }) {
-  const [playSuction] = useSound(suctionsound, { volume: 0.3 });
+  const [playSuction] = useSound(suctionsound, { volume: 0.3 })
 
   return (
-      <Link to={link}>
-      <div className='project-item'>
-        <div 
+    <div className='project-item'>
+      <a href={link} target='_blank' rel='noreferrer'>
+        <div
           className='project-title'
           onMouseEnter={() => setActiveIndex(index)}
           onMouseLeave={() => setActiveIndex(-1)}
         >
-          <div onClick={playSuction} className='project-line'>{title}</div>
+          <div onClick={playSuction} className='project-line'>
+            {title}
+          </div>
         </div>
-      </div>
-      </Link>
+      </a>
+    </div>
   )
 }
 

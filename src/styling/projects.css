@@ -8,6 +8,10 @@
   margin-bottom: 80px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .projects-reel {
   margin-top: 20px;
   display: flex;
@@ -111,7 +115,7 @@ div.flag {
 }
 
 .project-item {
-  display: inline-block;
+  display: flex;
   margin-top: 3%;
   text-align: center;
   justify-content: center;
