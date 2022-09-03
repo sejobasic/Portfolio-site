@@ -21,9 +21,9 @@ function App() {
   useEffect(() => {
     const existingPreference = localStorage.getItem('DARK_MODE', theme);
     if (existingPreference) {
-     ( existingPreference === "dark")
-        ? setTheme("dark")
-        : setTheme("light");
+     ( existingPreference === "light")
+        ? setTheme("light")
+        : setTheme("dark");
     } else {
       setTheme("light");
       localStorage.setItem("DARK_MODE", "dark");
