@@ -88,10 +88,9 @@ function Home({ theme, toggle }) {
             >
               <p ref={ref}>
                 {' '}
-                HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER, GRAPHIC DESIGNER
-                AND MUSIC PRODUCER <br />
+                HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER GRAPHIC DESIGNER <br />
                 BASED IN ARIZONA. I SPECIALIZE IN FRONT-END DEVELOPMENT,
-                CREATIVE DESIGN AND ELECTRONIC MUSIC. <br />
+                CREATIVE DESIGN AND USER EXPERIENCE. <br />
                 MY PASSION FOR CREATIVITY MOTIVATES ME TO CONTINUOUSLY EXPAND MY
                 SKILL SET THROUGH NEW <br />
                 TECHNOLOGIES, INSPIRE OTHERS, AND WORK COLLECTIVELY TO BRING NEW
