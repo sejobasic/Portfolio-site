@@ -109,6 +109,7 @@ function Home({ theme, toggle }) {
                     <div className='line-title'></div>
                     <span>Creative Developer</span>
                     <span>Graphic Designer</span>
+                    <span>Musician</span>
                     <span>Artist</span>
                     <span>Creative Developer</span>
                   </div>
