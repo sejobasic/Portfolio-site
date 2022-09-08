@@ -88,7 +88,7 @@ function Home({ theme, toggle }) {
             >
               <p ref={ref}>
                 {' '}
-                HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER GRAPHIC DESIGNER <br />
+                HI MY NAME IS SEJO, I AM A SOFTWARE ENGINEER AND GRAPHIC DESIGNER <br />
                 BASED IN ARIZONA. I SPECIALIZE IN FRONT-END DEVELOPMENT,
                 CREATIVE DESIGN AND USER EXPERIENCE. <br />
                 MY PASSION FOR CREATIVITY MOTIVATES ME TO CONTINUOUSLY EXPAND MY
@@ -109,7 +109,6 @@ function Home({ theme, toggle }) {
                     <div className='line-title'></div>
                     <span>Creative Developer</span>
                     <span>Graphic Designer</span>
-                    <span>Musician</span>
                     <span>Artist</span>
                     <span>Creative Developer</span>
                   </div>

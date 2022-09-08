@@ -170,7 +170,7 @@ function Contact() {
               SOUNDCLOUD
             </motion.a>
           </div> */}
-          {/* <div className='contact-contents'>
+          <div className='contact-contents'>
             <motion.a
               className='link-tag'
               variants={item3}
@@ -180,7 +180,7 @@ function Contact() {
             >
               SPOTIFY
             </motion.a>
-          </div> */}
+          </div>
           <div className='contact-contents'>
             <motion.a
               className='link-tag'
