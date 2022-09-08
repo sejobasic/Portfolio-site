@@ -148,17 +148,17 @@ function Contact() {
               CODE SANDBOX
             </motion.a>
           </div>
-          {/* <div className='contact-contents'>
+          <div className='contact-contents'>
             <motion.a
               className='link-tag'
               variants={item3}
-              href='https://www.instagram.com/sejoforever/?hl=en'
+              href='https://codepen.io/sejobasic'
               target='_blank'
               rel='noreferrer'
             >
-              INSTAGRAM
+              CODEPEN
             </motion.a>
-          </div> */}
+          </div>
           {/* <div className='contact-contents'>
             <motion.a
               className='link-tag'
